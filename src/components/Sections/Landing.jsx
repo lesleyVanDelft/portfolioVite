@@ -1,8 +1,7 @@
+import blobSvg from '../../assets/img/blobanimation.svg';
 const Landing = () => {
 	return (
-		<div className="Landing">
-			{/* <h2>landing page</h2> */}
-
+		<section className="Landing">
 			<div className="Landing__content">
 				<h3 className="Landing__content--welcome">Hi there!</h3>
 				<h2 className="Landing__content--name">My name is Lesley.</h2>
@@ -16,7 +15,7 @@ const Landing = () => {
 					About me &#8595;
 				</button>
 			</div>
-		</div>
+		</section>
 	);
 };
 

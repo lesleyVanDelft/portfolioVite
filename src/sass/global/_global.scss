@@ -43,4 +43,23 @@ button {
 section {
 	height: 100vh;
 	width: 100%;
+	padding: 0 1rem;
 }
+
+.number {
+	font-family: var(--font-menu);
+	color: var(--color-main-1);
+	font-size: 1.5rem;
+	padding-right: 0.3rem;
+	// font-weight: var(--font-weight-light1);
+	font-weight: 100;
+}
+
+// .blobSvg {
+// 	position: absolute;
+// 	bottom: -5rem;
+// 	opacity: 1;
+// 	right: -10rem;
+// 	width: 350px;
+// 	height: 350px;
+// }
