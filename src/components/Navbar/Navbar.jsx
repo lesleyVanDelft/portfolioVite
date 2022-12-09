@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import NavbarMenu from './NavbarMenu';
 
 const Navbar = () => {
+	const [menuActive, setMenuActive] = useState(false);
 	return (
 		<nav className="Navbar">
 			<div className="Navbar__logo">
@@ -11,12 +13,14 @@ const Navbar = () => {
 				</h1>
 			</div>
 			<div className="Navbar__menu">
-				<div className="Navbar__menu--toggle">
+				<div
+					className="Navbar__menu--toggle"
+					onClick={() => setMenuActive(!menuActive)}>
 					<span></span>
 					<span></span>
 					<span></span>
 				</div>
-				<NavbarMenu />
+				{menuActive && <NavbarMenu />}
 			</div>
 		</nav>
 	);

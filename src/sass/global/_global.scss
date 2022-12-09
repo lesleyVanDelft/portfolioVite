@@ -18,6 +18,10 @@ html {
 	font-family: var(--font-main);
 }
 
+body {
+	color: var(--white);
+}
+
 ul {
 	list-style: none;
 	font-family: inherit;
@@ -27,4 +31,16 @@ a,
 a:visited {
 	color: inherit;
 	text-decoration: none;
+}
+
+button {
+	background: inherit;
+	border: none;
+	font-family: inherit;
+	color: inherit;
+}
+
+section {
+	height: 100vh;
+	width: 100%;
 }
