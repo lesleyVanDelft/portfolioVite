@@ -14,7 +14,7 @@ const Navbar = () => {
 			</div>
 			<div className="Navbar__menu">
 				<div
-					className="Navbar__menu--toggle"
+					className={`Navbar__menu--toggle ${menuActive ? 'active' : ''}`}
 					onClick={() => setMenuActive(!menuActive)}>
 					<span></span>
 					<span></span>

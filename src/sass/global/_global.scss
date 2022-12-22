@@ -63,3 +63,12 @@ section {
 // 	width: 350px;
 // 	height: 350px;
 // }
+.TestPage {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	h1 {
+		// margin: auto;
+	}
+}

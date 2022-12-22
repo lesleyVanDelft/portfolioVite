@@ -17,9 +17,10 @@ const Landing = () => {
 	return (
 		<motion.section
 			className="Landing"
-			animate={{ opacity: 1 }}
-			hidden={{ opacity: 0 }}
-			transition={{ duration: 3 }}>
+			// animate={{ opacity: 1 }}
+			// hidden={{ opacity: 0 }}
+			// transition={{ duration: 0.3 }}
+		>
 			<div className="Landing__content">
 				<h3 className="Landing__content--welcome">Hi there!</h3>
 				<h2 className="Landing__content--name">My name is Lesley.</h2>
