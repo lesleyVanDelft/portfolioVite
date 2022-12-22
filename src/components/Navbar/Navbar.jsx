@@ -1,8 +1,30 @@
 import { useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import NavbarMenu from './NavbarMenu';
 
 const Navbar = () => {
 	const [menuActive, setMenuActive] = useState(false);
+	const list = {
+		visible: {
+			opacity: 1,
+			height: 500,
+			width: 500,
+			// transition: {
+			// 	duration: 0.1,
+			// 	type: 'spring',
+			// 	stiffness: 70,
+			// },
+		},
+		hidden: { opacity: 0, height: 0, width: 0 },
+	};
+
+	const item = {
+		visible: { opacity: 1 },
+		hidden: { opacity: 0 },
+		transition: {
+			duration: 1,
+		},
+	};
 	return (
 		<nav className="Navbar">
 			<div className="Navbar__logo">
@@ -20,7 +42,27 @@ const Navbar = () => {
 					<span></span>
 					<span></span>
 				</div>
-				{menuActive && <NavbarMenu />}
+				<AnimatePresence>
+					{menuActive && (
+						<motion.ul
+							className="NavbarMenu"
+							initial="hidden"
+							animate="visible"
+							exit={'hidden'}
+							variants={list}>
+							<motion.li variants={item}>1</motion.li>
+							<motion.li variants={item}>2</motion.li>
+							<motion.li variants={item}>3</motion.li>
+						</motion.ul>
+					)}
+				</AnimatePresence>
+				{/* {menuActive && (
+					<motion.ul className="NavbarMenu">
+						<motion.li>1</motion.li>
+						<motion.li>2</motion.li>
+						<motion.li>3</motion.li>
+					</motion.ul>
+				)} */}
 			</div>
 		</nav>
 	);

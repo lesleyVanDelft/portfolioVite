@@ -3,6 +3,7 @@
 		url('../../assets/img/galaxy.jpg') no-repeat 50% center / cover;
 	padding-top: 5rem;
 	text-align: center;
+	scroll-snap-align: start;
 
 	&__content {
 		display: flex;

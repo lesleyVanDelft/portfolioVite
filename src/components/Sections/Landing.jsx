@@ -1,5 +1,6 @@
 import blobSvg from '../../assets/img/blobanimation.svg';
 import { motion } from 'framer-motion';
+import { useRef } from 'react';
 
 const variants = {
 	hidden: {
@@ -13,7 +14,11 @@ const variants = {
 	},
 };
 
-const Landing = () => {
+const Landing = ({ scrollToAbout }) => {
+	// const scrollRef = useRef(null);
+
+	// const handleScroll = () => scrollRef.current.scrollIntoView();
+
 	return (
 		<motion.section
 			className="Landing"
@@ -30,7 +35,9 @@ const Landing = () => {
 					making beautiful websites.
 				</p>
 
-				<button className="Landing__content--button btnPrimary">
+				<button
+					className="Landing__content--button btnPrimary"
+					onClick={() => scrollToAbout()}>
 					About me &#8595;
 				</button>
 			</div>
