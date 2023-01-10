@@ -1,5 +1,6 @@
 import imageDesigno from './assets/img/officialThumbnail2.png';
-import mockupSpaceTourism from './assets/img/spacetourismMockup.png';
+// import imageDesigno from './assets/img/type1designo.png';
+import mockupSpaceTourism from './assets/img/spacetourism.png';
 import mockupPhotosnap from './assets/img/photosnapMockup.png';
 
 export const projectList = [
@@ -13,7 +14,7 @@ export const projectList = [
 	{
 		title: 'Space Tourism',
 		tech: ['React', 'Sass'],
-		image: imageDesigno,
+		image: mockupSpaceTourism,
 		description: 'A simple static site using React number 2. ',
 	},
 	{

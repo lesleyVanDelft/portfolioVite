@@ -2,3 +2,22 @@
 	background-color: var(--color-main-1);
 	color: var(--black);
 }
+
+.btnCta {
+	background-color: var(--color-main-1);
+	margin-right: 1rem;
+	color: var(--black);
+	font-size: 1rem;
+	font-family: var(--font-menu);
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	height: 30px;
+	width: 120px;
+	border-radius: 2px;
+	background-color: transparent;
+	border: 1px solid var(--color-main-1);
+	color: var(--white);
+	&:last-child {
+		margin: 0;
+	}
+}

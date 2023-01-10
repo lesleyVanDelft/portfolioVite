@@ -1,6 +1,6 @@
 const About = ({ refProps }) => {
 	return (
-		<section className="About" ref={refProps}>
+		<section className="About" ref={refProps} id={'About'}>
 			After working several jobs in the transport and logistics industry, I
 			realized I wanted to work somewhere a bit more mentally stimulating.
 			Something that allowed creativity as well as critical thinking and problem

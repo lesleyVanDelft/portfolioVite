@@ -11,6 +11,11 @@ const ProjectsItem = ({ project, index }) => {
 				<img src={project.image} alt="" />
 			</figure>
 			<p className="Projects__item--description">{project.description}</p>
+
+			<div className="Projects__item--buttons">
+				<button className="btnCta">Live Site</button>
+				<button className="btnCta">View Code</button>
+			</div>
 		</article>
 	);
 };

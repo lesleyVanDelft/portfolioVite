@@ -23,7 +23,7 @@ const Test = () => {
 							value: 1560,
 							density: {
 								enable: true,
-								value_area: 3500,
+								value_area: 2500,
 							},
 						},
 						line_linked: {
@@ -40,7 +40,7 @@ const Test = () => {
 						opacity: {
 							anim: {
 								enable: true,
-								speed: 1.5,
+								speed: 1.3,
 								opacity_min: 0.05,
 							},
 						},
@@ -65,7 +65,7 @@ const Test = () => {
 						},
 						modes: {
 							push: {
-								particles_nb: 1,
+								particles_nb: 50,
 							},
 							connect: {
 								opacity: 0.1,

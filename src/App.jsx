@@ -5,6 +5,7 @@ import Projects from './components/Sections/Projects';
 import Test from './pages/Test';
 import './dist/css/index.css';
 import About from './components/Sections/About';
+import Container from './components/Container';
 
 function App() {
 	const aboutRef = useRef(null);
@@ -15,11 +16,12 @@ function App() {
 
 	return (
 		<div className="App">
-			<Navbar />
-			<Landing scrollToAbout={scrollToAbout} />
-			<About refProps={aboutRef} />
-			<Projects />
-			<Test />
+			<Container>
+				<Navbar />
+				<Landing scrollToAbout={scrollToAbout} />
+				<About refProps={aboutRef} />
+				<Projects />
+			</Container>
 		</div>
 	);
 }
