@@ -65,29 +65,31 @@ const Navbar = () => {
 				</div>
 				<AnimatePresence>
 					{menuActive && (
-						<motion.ul
+						<motion.nav
 							className="Navbar__menu--mobile"
 							initial="hidden"
 							animate="visible"
 							exit={'hidden'}
 							variants={list}>
-							<motion.li variants={item}>
-								<a href="#About">
-									<span className="number inverted">01.</span> About Me
-								</a>
-							</motion.li>
-							<motion.li variants={item}>
-								<a href="#projects">
-									<span className="number inverted">02.</span>Projects
-								</a>
-							</motion.li>
-							<motion.li variants={item}>
-								<a href="#about">
-									{' '}
-									<span className="number inverted">03.</span>Contact
-								</a>
-							</motion.li>
-						</motion.ul>
+							<motion.ul>
+								<motion.li variants={item}>
+									<a href="#About">
+										<span className="number inverted">01.</span> About Me
+									</a>
+								</motion.li>
+								<motion.li variants={item}>
+									<a href="#projects">
+										<span className="number inverted">02.</span>Projects
+									</a>
+								</motion.li>
+								<motion.li variants={item}>
+									<a href="#about">
+										{' '}
+										<span className="number inverted">03.</span>Contact
+									</a>
+								</motion.li>
+							</motion.ul>
+						</motion.nav>
 					)}
 				</AnimatePresence>
 			</div>

@@ -19,13 +19,14 @@
 	&__item {
 		margin-top: 3.5rem;
 		padding: 1rem;
+		padding-bottom: 2rem;
 		z-index: 49;
 
 		// blurred background
 		background: rgba(255, 255, 255, 0.04);
 		border-radius: 16px;
 		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-		backdrop-filter: blur(0.9px);
+		backdrop-filter: blur(1px);
 		-webkit-backdrop-filter: blur(2.9px);
 		border: 1px solid rgba(255, 255, 255, 0.2);
 
@@ -72,7 +73,9 @@
 		}
 
 		&--buttons {
-			margin-top: 1rem;
+			// margin-top: 1rem;
+			padding-top: 2rem;
+			// padding-bottom;
 			// justify-self: flex-start;
 		}
 	}

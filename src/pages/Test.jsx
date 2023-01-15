@@ -32,7 +32,7 @@ const Test = () => {
 						},
 						move: {
 							direction: 'random',
-							speed: 0.05,
+							speed: 1.05,
 						},
 						size: {
 							value: 1.2,
@@ -41,7 +41,7 @@ const Test = () => {
 							anim: {
 								enable: true,
 								speed: 1.3,
-								opacity_min: 0.05,
+								opacity_min: 0,
 							},
 						},
 						shape: {
@@ -55,8 +55,8 @@ const Test = () => {
 					interactivity: {
 						events: {
 							onclick: {
-								enable: true,
-								mode: 'push',
+								enable: false,
+								// mode: 'push',
 							},
 							// onhover: {
 							// 	enable: true,
