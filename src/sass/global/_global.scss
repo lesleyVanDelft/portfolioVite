@@ -93,3 +93,12 @@ section {
 		// margin: auto;
 	}
 }
+
+.pageTitle {
+	font-weight: var(--font-weight-light1);
+	text-transform: capitalize;
+	font-size: 2.8rem;
+	text-align: left;
+	display: flex;
+	align-items: center;
+}

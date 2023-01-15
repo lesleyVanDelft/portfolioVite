@@ -9,9 +9,13 @@ import Container from './components/Container';
 
 function App() {
 	const aboutRef = useRef(null);
+	const projectsRef = useRef(null);
 
 	const scrollToAbout = () => {
 		aboutRef.current.scrollIntoView({ behavior: 'smooth' });
+	};
+	const scrollToProjects = () => {
+		projectsRef.current.scrollIntoView({ behavior: 'smooth' });
 	};
 
 	return (
@@ -19,8 +23,8 @@ function App() {
 			<Container>
 				<Navbar />
 				<Landing scrollToAbout={scrollToAbout} />
-				<About refProps={aboutRef} />
-				<Projects />
+				<About refProps={aboutRef} scrollToProjects={scrollToProjects} />
+				<Projects refProps={projectsRef} />
 			</Container>
 		</div>
 	);
