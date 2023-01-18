@@ -18,6 +18,8 @@
 		text-align: left;
 	}
 	&__item {
+		width: 90vw;
+		max-width: 31.25rem;
 		margin-top: 3.5rem;
 		padding: 1rem;
 		padding-bottom: 2rem;
@@ -30,8 +32,6 @@
 		backdrop-filter: blur(1px);
 		-webkit-backdrop-filter: blur(2.9px);
 		border: 1px solid rgba(255, 255, 255, 0.3);
-		// border: 1px solid var(--color-main-transparent);
-
 		display: flex;
 		flex-direction: column;
 
@@ -65,7 +65,7 @@
 		}
 
 		&--image {
-			width: 380px;
+			width: 100%;
 			img {
 				margin-bottom: 1.2rem;
 				width: 100%;
