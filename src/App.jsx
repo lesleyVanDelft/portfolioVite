@@ -21,12 +21,12 @@ function App() {
 
 	return (
 		<div className="App">
-			{/* <!-- A little help for the Netlify bots if you're not using a SSG --> */}
-			<form name="contactForm" netlify netlify-honeypot="bot-field" hidden>
-				<input type="text" name="name" />
-				<input type="email" name="email" />
-				<textarea name="message"></textarea>
-			</form>
+			{/* <!-- A little help for the Netlify bots if you're not using a SSG -->
+			// <form name="contactForm" netlify netlify-honeypot="bot-field" hidden>
+			// 	<input type="text" name="name" />
+			// 	<input type="email" name="email" />
+			// 	<textarea name="message"></textarea>
+			// </form> */}
 
 			<Container>
 				<Navbar />

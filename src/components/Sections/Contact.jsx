@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { redirect } from 'react-router';
 
 const Contact = () => {
 	// const [name, setName] = useState('');
@@ -18,9 +19,9 @@ const Contact = () => {
 		fetch('/', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-			body: encode({ 'form-name': form.getAttribute('name'), ...formData }),
+			body: new URLSearchParams(formData).toString(),
 		})
-			.then(() => alert('success'))
+			.then(() => alert('/thanks/'))
 			.catch(error => alert(error));
 
 		e.preventDefault();
@@ -50,6 +51,7 @@ const Contact = () => {
 					<label htmlFor="name">Your name</label>
 					<input
 						type="text"
+						// action="/pages/FormSuccess"
 						name="name"
 						id="name"
 						placeholder="Please enter your name"
@@ -74,9 +76,10 @@ const Contact = () => {
 						value={formData.message}
 					/>
 				</div>
-				<button type="submit" className="btnCta">
+				<input type="submit" className="btnCta" />
+				{/* <button type="submit" className="btnCta">
 					Send message
-				</button>
+				</button> */}
 			</form>
 		</section>
 	);
