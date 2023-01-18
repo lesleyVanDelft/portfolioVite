@@ -6,7 +6,6 @@ const Contact = () => {
 				<p>Contact Me</p>
 			</h3>
 			<form
-				className="Contact"
 				name="contactForm"
 				method="POST"
 				data-netlify="true"
