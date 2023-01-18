@@ -7,12 +7,11 @@ const Contact = () => {
 			</h3>
 			<form
 				className="Contact"
-				name="contact"
-				netlify
-				onSubmit={e => {
-					e.preventDefault();
-					console.log('hi');
-				}}>
+				name="contactForm"
+				method="POST"
+				data-netlify="true"
+				onSubmit="submit">
+				<input type="hidden" name="form-name" value="contactForm" />
 				<div className="Contact__container">
 					<label htmlFor="name">Your name</label>
 					<input
