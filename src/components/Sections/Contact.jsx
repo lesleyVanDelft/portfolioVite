@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 
 const Contact = () => {
-	// const [name, setName] = useState('');
-	// const [message, setMessage] = useState('');
-	const [formData, setFormData] = useState({});
+	const [name, setName] = useState('');
+	const [message, setMessage] = useState('');
+	// const [formData, setFormData] = useState({});
 
 	const encode = data => {
 		return Object.keys(data)
@@ -18,7 +18,7 @@ const Contact = () => {
 		fetch('/', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-			body: encode({ 'form-name': form.getAttribute('name'), ...formData }),
+			body: encodeURI({ 'form-name': 'contactForm', ...this.state }),
 		})
 			.then(() => alert('success'))
 			.catch(error => alert(error));
@@ -42,8 +42,8 @@ const Contact = () => {
 			<form
 				name="contactForm"
 				method="post"
+				action="/"
 				data-netlify="true"
-				data-netlify-honeypot="bot-field"
 				onSubmit={handleSubmit}>
 				<input type="hidden" name="form-name" value="contactForm" />
 				<div className="Contact__container">
@@ -53,9 +53,9 @@ const Contact = () => {
 						name="name"
 						id="name"
 						placeholder="Please enter your name"
-						onChange={handleChange}
-						// onChange={e => setName(e.target.value)}
-						value={formData.name}
+						// onChange={handleChange}
+						onChange={e => setName(e.target.value)}
+						value={name}
 					/>
 				</div>
 				<div className="Contact__container">
@@ -69,9 +69,9 @@ const Contact = () => {
 						name="message"
 						id="message"
 						placeholder="Please share your thoughts..."
-						onChange={handleChange}
-						// onChange={e => setMessage(e.target.value)}
-						value={formData.message}
+						// onChange={handleChange}
+						onChange={e => setMessage(e.target.value)}
+						value={message}
 					/>
 				</div>
 				<button type="submit" className="btnCta">
