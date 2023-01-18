@@ -8,7 +8,7 @@ const Contact = () => {
 			<form
 				className="Contact"
 				name="contact"
-				data-netlify="true"
+				netlify
 				onSubmit={e => {
 					e.preventDefault();
 					console.log('hi');
