@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 const Contact = () => {
 	const [name, setName] = useState('');
 	const [message, setMessage] = useState('');
-	// const [formData, setFormData] = useState({});
+	const [formData, setFormData] = useState({});
 
 	const encode = data => {
 		return Object.keys(data)
@@ -18,7 +18,7 @@ const Contact = () => {
 		fetch('/', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-			body: encodeURI({ 'form-name': 'contactForm', ...this.state }),
+			body: encodeURI({ 'form-name': 'contactForm', ...formData }),
 		})
 			.then(() => alert('success'))
 			.catch(error => alert(error));
@@ -63,9 +63,9 @@ const Contact = () => {
 					<textarea
 						cols="10"
 						rows="5"
-						// maxLength={1000}
-						// required={true}
-						// autoComplete="off"
+						maxLength={1000}
+						required={true}
+						autoComplete="off"
 						name="message"
 						id="message"
 						placeholder="Please share your thoughts..."
