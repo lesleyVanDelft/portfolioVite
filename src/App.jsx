@@ -1,12 +1,13 @@
-import { useEffect, useState } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import AnimatedRoutes from './components/AnimatedRoutes';
 import './styles/css/index.css';
-import Home from './pages/Home';
-import Tester from './pages/Tester';
 
 function App() {
 	return (
 		<div className="App">
-			<Home />
+			<BrowserRouter>
+				<AnimatedRoutes />
+			</BrowserRouter>
 		</div>
 	);
 }

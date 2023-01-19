@@ -5,7 +5,6 @@ import About from '../components/Sections/About';
 import Contact from '../components/Sections/Contact';
 import Landing from '../components/Sections/Landing';
 import Projects from '../components/Sections/Projects';
-import Test from './Test';
 
 const Home = () => {
 	const aboutRef = useRef(null);
