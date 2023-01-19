@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import { redirect } from 'react-router';
 
 const Contact = () => {
-	// const [name, setName] = useState('');
-	// const [message, setMessage] = useState('');
+	const [name, setName] = useState('');
+	const [message, setMessage] = useState('');
 	const [formData, setFormData] = useState({});
 
 	const encode = data => {
@@ -19,7 +19,7 @@ const Contact = () => {
 		fetch('/', {
 			method: 'POST',
 			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-			body: new URLSearchParams(formData).toString(),
+			body: encodeURI({ 'form-name': 'contactForm', ...formData }),
 		})
 			.then(() => alert('/thanks/'))
 			.catch(error => alert(error));
@@ -43,8 +43,8 @@ const Contact = () => {
 			<form
 				name="contactForm"
 				method="post"
+				action="/"
 				data-netlify="true"
-				data-netlify-honeypot="bot-field"
 				onSubmit={handleSubmit}>
 				<input type="hidden" name="form-name" value="contactForm" />
 				<div className="Contact__container">
@@ -55,9 +55,9 @@ const Contact = () => {
 						name="name"
 						id="name"
 						placeholder="Please enter your name"
-						onChange={handleChange}
-						// onChange={e => setName(e.target.value)}
-						value={formData.name}
+						// onChange={handleChange}
+						onChange={e => setName(e.target.value)}
+						value={name}
 					/>
 				</div>
 				<div className="Contact__container">
@@ -65,15 +65,15 @@ const Contact = () => {
 					<textarea
 						cols="10"
 						rows="5"
-						// maxLength={1000}
-						// required={true}
-						// autoComplete="off"
+						maxLength={1000}
+						required={true}
+						autoComplete="off"
 						name="message"
 						id="message"
 						placeholder="Please share your thoughts..."
-						onChange={handleChange}
-						// onChange={e => setMessage(e.target.value)}
-						value={formData.message}
+						// onChange={handleChange}
+						onChange={e => setMessage(e.target.value)}
+						value={message}
 					/>
 				</div>
 				<input type="submit" className="btnCta" />

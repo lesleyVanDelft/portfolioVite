@@ -1,40 +1,38 @@
-import { useRef, useState } from 'react';
-import Landing from './components/Sections/Landing';
-import Navbar from './components/Navbar/Navbar';
-import Projects from './components/Sections/Projects';
-import Test from './pages/Test';
+import { useEffect, useState } from 'react';
 import './styles/css/index.css';
-import About from './components/Sections/About';
-import Container from './components/Container';
-import Contact from './components/Sections/Contact';
+import Home from './pages/Home';
+import Tester from './pages/Tester';
 
 function App() {
-	const aboutRef = useRef(null);
-	const projectsRef = useRef(null);
+	const [loading, setLoading] = useState(true);
 
-	const scrollToAbout = () => {
-		aboutRef.current.scrollIntoView({ behavior: 'smooth' });
-	};
-	const scrollToProjects = () => {
-		projectsRef.current.scrollIntoView({ behavior: 'smooth' });
-	};
+	// const asyncLoading = () => {
+	// 	return new Promise(resolve => setTimeout(() => resolve(), 2500));
+	// };
+
+	useEffect(() => {
+		const onPageLoad = () => {
+			setLoading(false);
+		};
+		// console.log(document.readyState);
+
+		// document.readyState === 'complete' ? setLoading(false) :
+		// if (document.readyState === 'interactive') {
+		// 	setLoading(true);
+		// 	console.log('readyState interact');
+		// } else {
+		// 	window.addEventListener('load', setLoading(false));
+		// 	console.log('loaded');
+		// }
+		// window.addEventListener('load', onPageLoad());
+		setTimeout(() => {
+			setLoading(false);
+		}, 1500);
+	}, []);
 
 	return (
 		<div className="App">
-			{/* <!-- A little help for the Netlify bots if you're not using a SSG -->
-			// <form name="contactForm" netlify netlify-honeypot="bot-field" hidden>
-			// 	<input type="text" name="name" />
-			// 	<input type="email" name="email" />
-			// 	<textarea name="message"></textarea>
-			// </form> */}
-
-			<Container>
-				<Navbar />
-				<Landing scrollToAbout={scrollToAbout} />
-				<About refProps={aboutRef} scrollToProjects={scrollToProjects} />
-				<Projects refProps={projectsRef} />
-				<Contact />
-			</Container>
+			<Home />
 		</div>
 	);
 }
