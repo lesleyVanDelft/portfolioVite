@@ -13,6 +13,7 @@ const variants = {
 };
 
 const Landing = ({ scrollToAbout }) => {
+	const test = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 	return (
 		<motion.section className="Landing">
 			<div className="Landing__content">
@@ -27,7 +28,12 @@ const Landing = ({ scrollToAbout }) => {
 				<button
 					className="Landing__content--button btnPrimary"
 					onClick={() => scrollToAbout()}>
-					About me &#8595;
+					<span>About me &#8595;</span>
+					<div className="ray_box">
+						{test.map((el, i) => {
+							return <span className={`ray ray${i + 1}`} key={i}></span>;
+						})}
+					</div>
 				</button>
 			</div>
 		</motion.section>

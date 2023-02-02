@@ -16,11 +16,46 @@
 		justify-content: center;
 		text-align: center;
 		padding-bottom: 3rem;
+		// position: relative;
+
+		// TESTING
+		// TESTING
+		// TESTING
+		svg {
+			// background-color: pink;
+			transform: rotate(-180deg);
+			circle {
+				fill: transparent;
+				stroke: var(--color-main-1);
+				stroke-width: 1.5;
+				stroke-dasharray: 400;
+				stroke-dashoffset: -400;
+				animation: rotate 5s;
+			}
+		}
+
+		@keyframes rotate {
+			// from {
+			// 	stroke-dasharray: 0;
+			// 	stroke-dashoffset: 0;
+			// }
+			to {
+				stroke-dashoffset: 400;
+				stroke-dasharray: 800;
+				// stroke-dasharray: 400;
+				// stroke-dashoffset: 1000;
+			}
+		}
+
+		// TESTING
+		// TESTING
+		// TESTING
 
 		&--welcome {
 			font-weight: var(--font-weight-light1);
 			font-size: 2.2rem;
 			line-height: 2;
+			margin-top: 5rem;
 		}
 
 		&--name {
@@ -31,7 +66,7 @@
 
 		&--description {
 			font-size: 2rem;
-			margin: 3rem 0 6rem 0;
+			margin: 3rem 0 3rem 0;
 			line-height: 1.5;
 		}
 
@@ -39,14 +74,154 @@
 			font-size: 1.2rem;
 			background-color: transparent;
 			border: 1px solid var(--color-main-1);
+			border-left-color: transparent;
 			color: var(--white);
 			padding: 0.8rem 2rem;
+			padding: 0;
 			text-transform: uppercase;
 			font-weight: var(--font-weight-light1);
-			// border-radius: 50vw;
-			// width: 10rem;
-			// word-break: unset;
-			// height: 10rem;
+			border-radius: 50vw;
+			height: 13.75rem;
+			width: 13.75rem;
+			position: relative;
+			font-size: 2rem;
+			margin-top: 1rem;
+			background-color: var(--color-main-1);
+			// box-shadow: 0px 0px 40px 12px var(--color-main-1);
+			animation: glow 5s linear alternate-reverse infinite;
+			color: black;
+			// animation: glow 10s alternate-reverse infinite;
+			z-index: 49;
+			.ray_box {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				// -webkit-animation: ray_anim 120s linear infinite;
+				animation: ray_anim 120s linear infinite;
+				// z-index: -1;
+			}
+			.ray {
+				background: linear-gradient(
+					to bottom,
+					rgba(229, 255, 0, 0) 0%,
+					rgba(255, 238, 0, 0.8) 30%,
+					rgba(255, 251, 0, 0) 100%
+				);
+
+				// margin-left: 20px;
+				// border-radius: 80% 80% 0 0;
+				// border-radius: 80%;
+				position: absolute;
+				opacity: 0.15;
+				z-index: -1;
+			}
+
+			.ray1 {
+				height: 170px;
+				width: 30px;
+				transform: rotate(180deg);
+				top: -175px;
+				left: 15px;
+			}
+			.ray2 {
+				height: 100px;
+				width: 18px;
+				transform: rotate(230deg);
+				top: -120px;
+				left: 75px;
+			}
+			.ray3 {
+				height: 170px;
+				// width: 70px;
+				width: 40px;
+				// background-color: red;
+				transform: rotate(266deg);
+				top: -100px;
+				left: 70px;
+			}
+			.ray4 {
+				height: 100px;
+				width: 14px;
+				transform: rotate(295deg);
+				top: 25px;
+				left: 100px;
+			}
+			.ray5 {
+				height: 120px;
+				width: 15px;
+				transform: rotate(-25deg);
+				top: 60px;
+				left: 40px;
+			}
+			.ray6 {
+				height: 80px;
+				width: 20px;
+				transform: rotate(20deg);
+				top: 80px;
+				left: -60px;
+			}
+			.ray7 {
+				height: 180px;
+				width: 10px;
+				transform: rotate(70deg);
+				top: -35px;
+				left: -90px;
+			}
+			.ray8 {
+				height: 120px;
+				width: 30px;
+				transform: rotate(85deg);
+				top: -45px;
+				left: -130px;
+			}
+			.ray9 {
+				height: 80px;
+				width: 10px;
+				transform: rotate(120deg);
+				top: -85px;
+				left: -115px;
+				// background-color: red;
+			}
+			.ray10 {
+				height: 190px;
+				width: 23px;
+				transform: rotate(150deg);
+				top: -185px;
+				left: -60px;
+			}
+
+			@keyframes ray_anim {
+				0% {
+					transform: rotate(0deg);
+					// transform: rotate(0deg);
+				}
+				100% {
+					transform: rotate(360deg);
+					// transform: rotate(360deg);
+				}
+			}
+			@keyframes glow {
+				from {
+					box-shadow: 0px 0px 40px 12px var(--color-main-1);
+				}
+				to {
+					box-shadow: 0px 0px 70px 15px var(--color-main-1);
+				}
+			}
+
+			// &::before {
+			// 	content: '';
+			// 	position: absolute;
+			// 	top: 0%;
+			// 	left: 0%;
+			// 	width: 200px;
+			// 	height: 200px;
+			// 	background-color: transparent;
+			// 	border: 1px solid var(--color-main-1);
+			// 	border-left-color: transparent;
+			// 	transform: rotate(-25deg);
+			// 	border-radius: inherit;
+			// }
 		}
 	}
 }
