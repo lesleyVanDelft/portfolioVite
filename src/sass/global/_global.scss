@@ -44,6 +44,7 @@ button {
 
 section {
 	min-height: 100vh;
+	min-height: fill-available;
 	width: 100%;
 	padding: 0 1rem;
 	// scroll-snap-type: y mandatory;
