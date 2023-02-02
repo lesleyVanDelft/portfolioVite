@@ -1,7 +1,7 @@
 import imageDesigno from './assets/img/officialThumbnail2.png';
 // import imageDesigno from './assets/img/type1designo.png';
 import mockupSpaceTourism from './assets/img/spacetourism.png';
-import mockupPhotosnap from './assets/img/photosnapMockup.png';
+import mockupPhotosnap from './assets/img/mockupPhotoSnap.png';
 
 export const projectList = [
 	{
@@ -20,7 +20,7 @@ export const projectList = [
 	{
 		title: 'PhotoSnap',
 		tech: ['React', 'Sass'],
-		image: imageDesigno,
+		image: mockupPhotosnap,
 		description: 'A simple static site using React number 3.  ',
 	},
 ];
