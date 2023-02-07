@@ -12,8 +12,8 @@ const Navbar = () => {
 	const list = {
 		visible: {
 			opacity: 1,
-			height: 650,
-			width: 650,
+			height: 624,
+			width: 624,
 			translateY: -130,
 			translateX: 100,
 			// transition: {

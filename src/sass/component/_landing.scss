@@ -3,8 +3,8 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	height: 100vh;
-	min-height: -webkit-fill-available;
+	// height: 100vh;
+	// min-height: -webkit-fill-available;
 	padding: 0 1rem;
 	background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)),
 		url('../../assets/img/galaxy2.jpg') no-repeat 75% center / cover;
@@ -18,46 +18,12 @@
 		justify-content: center;
 		text-align: center;
 		padding-bottom: 3rem;
-		// position: relative;
-
-		// TESTING
-		// TESTING
-		// TESTING
-		svg {
-			// background-color: pink;
-			transform: rotate(-180deg);
-			circle {
-				fill: transparent;
-				stroke: var(--color-main-1);
-				stroke-width: 1.5;
-				stroke-dasharray: 400;
-				stroke-dashoffset: -400;
-				animation: rotate 5s;
-			}
-		}
-
-		@keyframes rotate {
-			// from {
-			// 	stroke-dasharray: 0;
-			// 	stroke-dashoffset: 0;
-			// }
-			to {
-				stroke-dashoffset: 400;
-				stroke-dasharray: 800;
-				// stroke-dasharray: 400;
-				// stroke-dashoffset: 1000;
-			}
-		}
-
-		// TESTING
-		// TESTING
-		// TESTING
 
 		&--welcome {
 			font-weight: var(--font-weight-light1);
 			font-size: 2.2rem;
 			line-height: 2;
-			margin-top: 5rem;
+			margin-top: 1.5rem;
 		}
 
 		&--name {

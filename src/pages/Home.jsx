@@ -17,13 +17,13 @@ const Home = () => {
 		projectsRef.current.scrollIntoView({ behavior: 'smooth' });
 	};
 	return (
-		<Container>
+		<>
 			<Navbar />
 			<Landing scrollToAbout={scrollToAbout} />
 			<About refProps={aboutRef} scrollToProjects={scrollToProjects} />
 			<Projects refProps={projectsRef} />
 			<Contact />
-		</Container>
+		</>
 	);
 };
 

@@ -4,8 +4,8 @@ const NavbarMenu = () => {
 	const list = {
 		visible: {
 			opacity: 1,
-			height: 650,
-			width: 650,
+			height: 500,
+			width: 500,
 			translateY: -130,
 			translateX: 100,
 			// transition: {
