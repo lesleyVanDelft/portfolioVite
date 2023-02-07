@@ -16,10 +16,12 @@
 		flex-direction: column;
 		p {
 			// color: red;
-			font-size: 1.5rem;
-			letter-spacing: 0.3px;
+			font-size: 1.2rem;
+			letter-spacing: 0.8px;
 			margin-bottom: 2rem;
-			line-height: 1.2;
+			line-height: 1.35;
+			font-weight: 300;
+			font-family: var(--font-menu);
 		}
 		button {
 			margin-top: 1.5rem;

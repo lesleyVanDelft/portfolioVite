@@ -13,16 +13,24 @@ const About = ({ refProps, scrollToProjects }) => {
 					problem solving.{' '}
 				</p>
 				<p>
+					After succesfully teaching myself everything needed, I could start
+					doing what I love most; making fast, beautiful websites.
+				</p>
+				{/* <p>
 					After reading a post on Reddit about someone becoming a self-taught
 					developer, I suddenly remembered that in my teenage years I used to
 					make small websites for fun and I really enjoyed doing that. And so
 					after doing a lot of research, I came to the conclusion that I really
 					wanted to become a front end developer.
-				</p>
+				</p> */}
 				<p>
-					I enjoy working with React especially. Learning new languages or
-					frameworks is something I really enjoy. I finally found my true
-					passion; making beautiful interactive, animated, responsive websites.
+					{/* I enjoy working with React especially.  */}
+					Below are some examples of some of the projects I created, please
+					check them out!
+					{/* Learning new languages or
+					frameworks is something I really enjoy. */}
+					{/* I finally found my true
+					passion; making beautiful interactive, animated, responsive websites. */}
 				</p>
 				<button
 					className="Landing__content--button btnPrimary"
