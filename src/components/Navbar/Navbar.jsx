@@ -34,7 +34,7 @@ const Navbar = () => {
 			width: 0,
 			transition: {
 				duration: 0.5,
-				staggerChildren: 0.01,
+				// staggerChildren: 0.01,
 			},
 		},
 	};
@@ -66,7 +66,7 @@ const Navbar = () => {
 				<AnimatePresence>
 					{menuActive && (
 						<motion.nav
-							className="Navbar__menu--mobile"
+							className={`Navbar__menu--mobile ${menuActive ? 'active' : ''}`}
 							initial="hidden"
 							animate="visible"
 							exit={'hidden'}
@@ -89,6 +89,13 @@ const Navbar = () => {
 									</a>
 								</motion.li>
 							</motion.ul>
+							<div className="craters">
+								<div className="crater crater1"></div>
+								<div className="crater crater2"></div>
+								<div className="crater crater3"></div>
+								<div className="crater crater4"></div>
+								<div className="crater crater5"></div>
+							</div>
 						</motion.nav>
 					)}
 				</AnimatePresence>

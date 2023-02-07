@@ -41,11 +41,80 @@
 	&__menu {
 		position: relative;
 		transition: all 0.3s ease-in-out;
+
+		// z-index: 50;
+
+		.craters {
+			position: absolute;
+			// left: -100px;
+			// background-color: #fff;
+			// top: rem;
+			// left: 0;
+			.crater {
+				background-color: hsla(0, 2%, 71%, 0.5);
+				height: 70px;
+				width: 70px;
+				border-radius: 50%;
+				position: relative;
+				z-index: 501;
+				&::before {
+					content: '';
+					position: absolute;
+					height: 65px;
+					width: 65px;
+					border-radius: 50%;
+					box-shadow: -8px 0px 0 2px hsla(0, 0%, 63%, 50%);
+					top: 3px;
+					left: 10px;
+					z-index: 501;
+				}
+			}
+			.crater1 {
+				top: 120px;
+				left: -170px;
+				transform: scale(1.5) rotate(-30deg);
+			}
+
+			.crater2 {
+				// background-color: #31b4ff;
+				// background-color: #1ca4f9;
+				bottom: 85px;
+				left: -35px;
+				transform: scale(0.7) rotate(-30deg);
+			}
+
+			.crater3 {
+				left: 85px;
+				top: -100px;
+
+				transform: scale(1.65) rotate(-40deg);
+
+				&::before {
+					box-shadow: -8px 0px 0 2px hsla(0, 0%, 63%, 25%);
+				}
+			}
+
+			.crater4 {
+				top: 103px;
+				left: 128px;
+				transform: scale(1.5) rotate(-70deg);
+				&::before {
+					box-shadow: -8px 0px 0 2px hsla(0, 0%, 63%, 25%);
+				}
+			}
+
+			.crater5 {
+				left: -125px;
+				transform: scale(0.8) rotate(-40deg);
+			}
+		}
+
 		&--mobile {
 			position: absolute;
 			right: -10rem;
 			top: -6rem;
-			background-color: var(--color-main-1);
+			// background-color: var(--color-main-1);
+			background-color: rgb(240, 240, 240);
 			font-size: 1.5rem;
 			display: flex;
 			align-items: center;
@@ -55,12 +124,23 @@
 			border-radius: 100vw;
 			color: var(--black);
 			padding-top: 4rem;
-			box-shadow: 0px 0px 25px 0px #ffd50d;
-			animation: boxshadowPulse 7s infinite;
+			// box-shadow: 0px 0px 25px 0px #ffd50d;
+			// animation: boxshadowPulse 7s infinite;
+			box-shadow: inset -20px -10px 90px 102px hsla(0, 0%, 63%, 0.514);
 			width: 39rem;
 			height: 39rem;
-			// width: 150vw;
-			// height: 75vh;
+
+			// &::before {
+			// 	content: '';
+			// 	position: absolute;
+			// 	width: 100%;
+			// 	height: 100%;
+			// 	border-radius: 100vw;
+			// 	// box-shadow: inset 40px -20px 81px 12px #868686;
+			// 	top: 0px;
+			// 	left: 0px;
+			// 	z-index: 500;
+			// }
 
 			ul {
 				padding-top: 7rem;
