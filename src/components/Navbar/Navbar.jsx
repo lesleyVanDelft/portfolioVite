@@ -7,9 +7,10 @@ import { useOutsideClick } from '../../hooks/useOutsideClick';
 const Navbar = () => {
 	const [menuActive, setMenuActive] = useState(false);
 	const menuRef = useRef(null);
+
 	useOutsideClick(menuRef, () => {
 		if (menuActive) {
-			setMenuActive(false);
+			setMenuActive(!menuActive);
 		}
 	});
 	// const scrollRef = useRef(null);
@@ -57,7 +58,7 @@ const Navbar = () => {
 		},
 	};
 	return (
-		<nav className="Navbar">
+		<nav className="Navbar" ref={menuRef}>
 			<div className="Navbar__logo">
 				<h1>
 					<span className="accentWhite">{`<`}</span>
@@ -111,6 +112,13 @@ const Navbar = () => {
 					)}
 				</AnimatePresence>
 			</div>
+			{menuActive && (
+				<div className="orbit">
+					<div className="rocket">
+						<div className="window"></div>
+					</div>
+				</div>
+			)}
 			{menuActive && <Overlay />}
 		</nav>
 	);
