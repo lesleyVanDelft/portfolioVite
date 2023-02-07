@@ -1,9 +1,17 @@
 import { useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import NavbarMenu from './NavbarMenu';
+import Overlay from '../Overlay';
+import { useOutsideClick } from '../../hooks/useOutsideClick';
 
 const Navbar = () => {
 	const [menuActive, setMenuActive] = useState(false);
+	const menuRef = useRef(null);
+	useOutsideClick(menuRef, () => {
+		if (menuActive) {
+			setMenuActive(false);
+		}
+	});
 	// const scrollRef = useRef(null);
 
 	// const scrollToAbout = () => {
@@ -23,17 +31,19 @@ const Navbar = () => {
 			// },
 			transition: {
 				staggerChildren: 0.25,
-				type: 'intertia',
+				// type: 'intertia',
 				// stiffness: 1000,
-				velocity: 150,
+				// velocity: 150,
 			},
 		},
 		hidden: {
 			opacity: 0,
-			height: 0,
-			width: 0,
+			height: 10,
+			width: 10,
+			translateY: 130,
+			translateX: 0,
 			transition: {
-				duration: 0.5,
+				duration: 0.25,
 				// staggerChildren: 0.01,
 			},
 		},
@@ -51,7 +61,7 @@ const Navbar = () => {
 			<div className="Navbar__logo">
 				<h1>
 					<span className="accentWhite">{`<`}</span>
-					{`LesleyVanDelft`}
+					<span>LesleyVanDelft</span>
 					<span className="accentWhite">{`/>`}</span>
 				</h1>
 			</div>
@@ -70,7 +80,8 @@ const Navbar = () => {
 							initial="hidden"
 							animate="visible"
 							exit={'hidden'}
-							variants={list}>
+							variants={list}
+							ref={menuRef}>
 							<motion.ul>
 								<motion.li variants={item}>
 									<a href="#About">
@@ -100,6 +111,7 @@ const Navbar = () => {
 					)}
 				</AnimatePresence>
 			</div>
+			{menuActive && <Overlay />}
 		</nav>
 	);
 };

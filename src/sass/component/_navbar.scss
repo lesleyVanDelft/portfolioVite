@@ -19,7 +19,7 @@
 	&__logo {
 		position: relative;
 		z-index: 101;
-		mix-blend-mode: difference;
+		mix-blend-mode: unset;
 		h1 {
 			color: var(--color-main-1);
 			font-family: var(--font-logo);
@@ -35,22 +35,25 @@
 					margin-left: 0.4rem;
 				}
 			}
+			span {
+				&:nth-child(2) {
+					// color: red;
+					text-shadow: 1px 1px rgba(0, 0, 0, 0.6539390756302521);
+				}
+			}
 		}
 	}
 
 	&__menu {
 		position: relative;
 		transition: all 0.3s ease-in-out;
-
-		// z-index: 50;
+		z-index: 40;
 
 		.craters {
 			position: absolute;
-			// left: -100px;
-			// background-color: #fff;
-			// top: rem;
-			// left: 0;
-			width: 100%;
+
+			left: 14rem;
+			bottom: 7rem;
 			.crater {
 				background-color: hsla(0, 2%, 71%, 0.5);
 				height: 70px;
@@ -73,7 +76,7 @@
 			.crater1 {
 				top: 120px;
 				left: -170px;
-				transform: scale(1.5) rotate(-30deg);
+				transform: scale(1.5) rotate(-40deg);
 			}
 
 			.crater2 {
@@ -145,12 +148,12 @@
 
 			ul {
 				padding-top: 7rem;
-				padding-right: 3rem;
+				padding-right: 2rem;
 				width: fit-content;
 				height: 45%;
 				display: flex;
 				flex-direction: column;
-				align-items: center;
+				align-items: flex-start;
 				justify-content: space-around;
 				z-index: 100;
 			}
