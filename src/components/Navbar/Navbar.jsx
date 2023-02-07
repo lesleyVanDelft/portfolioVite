@@ -89,13 +89,13 @@ const Navbar = () => {
 									</a>
 								</motion.li>
 							</motion.ul>
-							<div className="craters">
-								<div className="crater crater1"></div>
-								<div className="crater crater2"></div>
-								<div className="crater crater3"></div>
-								<div className="crater crater4"></div>
-								<div className="crater crater5"></div>
-							</div>
+							<motion.div className="craters">
+								<motion.div className="crater crater1"></motion.div>
+								<motion.div className="crater crater2"></motion.div>
+								<motion.div className="crater crater3"></motion.div>
+								<motion.div className="crater crater4"></motion.div>
+								<motion.div className="crater crater5"></motion.div>
+							</motion.div>
 						</motion.nav>
 					)}
 				</AnimatePresence>
