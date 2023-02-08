@@ -4,11 +4,6 @@ import ProjectsItem from './ProjectsItem';
 const Projects = ({ refProps }) => {
 	const [projects, setProjects] = useState(projectList);
 
-	// useEffect(() => {
-	// 		setProjects(projectList);
-	// 	},
-	// 	[projectList]
-	// ), [];
 	useEffect(() => {
 		setProjects(projectList);
 	}, [projectList]);

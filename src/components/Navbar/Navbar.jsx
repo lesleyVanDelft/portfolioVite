@@ -8,11 +8,11 @@ const Navbar = () => {
 	const [menuActive, setMenuActive] = useState(false);
 	const menuRef = useRef(null);
 
-	useOutsideClick(menuRef, () => {
-		if (menuActive) {
-			setMenuActive(false);
-		}
-	});
+	// useOutsideClick(menuRef, () => {
+	// 	if (menuActive) {
+	// 		setMenuActive(false);
+	// 	}
+	// });
 	// const scrollRef = useRef(null);
 
 	// const scrollToAbout = () => {
@@ -69,10 +69,7 @@ const Navbar = () => {
 					<span className="accentWhite">{`/>`}</span>
 				</h1>
 			</div>
-			<div
-				className="Navbar__menu"
-				ref={menuRef}
-				onClick={() => setMenuActive(!menuActive)}>
+			<div className="Navbar__menu" onClick={() => setMenuActive(!menuActive)}>
 				<div className={`Navbar__menu--toggle ${menuActive ? 'active' : ''}`}>
 					<span></span>
 					<span></span>

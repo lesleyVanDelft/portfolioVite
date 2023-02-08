@@ -76,7 +76,9 @@ const Contact = () => {
 						value={message}
 					/>
 				</div>
-				<input type="submit" className="btnCta" />
+				<button type="submit" className="btnCta">
+					Submit
+				</button>
 				{/* <button type="submit" className="btnCta">
 					Send message
 				</button> */}

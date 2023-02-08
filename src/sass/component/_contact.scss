@@ -2,6 +2,30 @@
 	// background-color: red;
 	padding-top: 5rem;
 	padding-bottom: 3rem;
+	position: relative;
+	width: 100vw;
+	height: 100%;
+	background: url('../../assets/img/galaxy2.jpg') no-repeat center center /
+		cover;
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 100vw;
+		height: 5rem;
+		left: 0;
+		top: -20px;
+		background: url('../../assets/img/pageTransitionTop.png') no-repeat center
+			center / cover;
+	}
+	form {
+		display: flex;
+		flex-direction: column;
+		// align-items: flex-start;
+		// justify-content: flex-start;
+		margin-top: 2.5rem;
+		width: 100%;
+	}
 	&__container {
 		margin-bottom: 1rem;
 		display: flex;
@@ -17,15 +41,30 @@
 
 		input {
 			height: 30px;
+			padding: 1.5rem 0;
+			&:first-of-type {
+				margin-bottom: 0.5rem;
+			}
+			// padding-left: 2rem;
+			// border: none;
 		}
 		textarea {
 			resize: none;
+			padding-top: 1rem;
 			// height: 18.75rem;
+			margin-bottom: 3.5rem;
+		}
+		label {
+			margin-bottom: 0.8rem;
+			padding-left: 0.1rem;
+			&:first-of-type {
+				margin-top: 1rem;
+			}
 		}
 		input,
 		textarea {
 			border: none;
-
+			// padding: 1rem 0;
 			border-radius: 2px;
 			padding-left: 0.5rem;
 			color: var(--white);
@@ -33,30 +72,72 @@
 			font-size: 1.2rem;
 			letter-spacing: 0.4px;
 			line-height: 1.5;
+			border: 1px solid transparent;
+			border-right-color: var(--color-main-1);
+			border-right-width: 2px;
+			outline: 1px solid transparent;
 
 			// blurred background
 			background: rgb(77, 77, 77);
 			background: linear-gradient(
 				90deg,
-				rgba(255, 255, 255, 0) 45%,
-				rgba(77, 77, 77, 1) 100%
+				rgb(255, 255, 255) 0%,
+				rgba(77, 77, 77, 0) 100%
 			);
 			border-radius: 2px;
 			box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-			backdrop-filter: blur(1px);
-			-webkit-backdrop-filter: blur(2.9px);
-			border: 1px solid rgba(255, 255, 255, 0.3);
+			// backdrop-filter: blur(1px);
+			// -webkit-backdrop-filter: blur(2.9px);
 
 			&:focus {
-				border: 1px solid rgba(255, 255, 255, 0);
-				outline: 1px solid pink;
+				border: 1px solid var(--color-main-1);
+				outline: 1px solid var(--color-main-1);
 			}
 
 			&::placeholder {
-				font-size: 1.1rem;
+				font-size: 1rem;
 				font-family: inherit;
 				letter-spacing: 0.3px;
+				color: black;
+				font-family: var(--font-menu);
+				padding-left: 0.5rem;
 			}
 		}
+	}
+	button {
+		font-size: 1.2rem;
+		background-color: transparent;
+		border: none;
+		color: var(--white);
+		padding: 0.8rem 2rem;
+		padding: 0;
+		text-transform: uppercase;
+		font-weight: var(--font-weight-light1);
+		border-radius: 50vw;
+		// border-radius: 5px;
+		font-family: var(--font-menu);
+		letter-spacing: 1px;
+		transition: all ease-in-out;
+		height: 8.75rem;
+		width: 8.75rem;
+		position: relative;
+		font-size: 2rem;
+		margin-top: 1rem;
+		background-color: var(--color-main-1);
+		animation: glow 3s linear alternate-reverse infinite;
+		color: rgba(0, 0, 0, 0.721);
+		z-index: 49;
+		align-self: center;
+	}
+}
+
+@keyframes glow {
+	from {
+		box-shadow: 0px 0px 40px 12px var(--color-main-1),
+			inset 0px 0px 35px 20px darken(hsl(54, 100%, 50%), 10%);
+	}
+	to {
+		box-shadow: 0px 0px 70px 15px var(--color-main-1),
+			inset 0px 0px 35px 20px darken(hsl(54, 100%, 50%), 10%);
 	}
 }

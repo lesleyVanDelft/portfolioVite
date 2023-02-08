@@ -5,6 +5,18 @@
 	padding-bottom: 3rem;
 	text-align: center;
 	scroll-snap-align: start;
+	position: relative;
+
+	// &::after {
+	// 	content: '';
+	// 	position: absolute;
+	// 	width: 100%;
+	// 	height: 5rem;
+	// 	left: 0;
+	// 	bottom: 70px;
+	// 	background: url('../../assets/img/pageTransitionBot.png') no-repeat center
+	// 		center / cover;
+	// }
 
 	&__content {
 		display: flex;
