@@ -25,16 +25,18 @@ const Landing = ({ scrollToAbout }) => {
 					beautiful websites.
 				</p>
 
-				<button
-					className="Landing__content--button btnPrimary"
-					onClick={() => scrollToAbout()}>
-					<span>About me &#8595;</span>
+				<div className="Landing__content--btnContainer">
+					<button
+						className="Landing__content--btnContainer--btn btnPrimary"
+						onClick={() => scrollToAbout()}>
+						<span>About me &#8595;</span>
+					</button>
 					<div className="ray_box">
 						{test.map((el, i) => {
 							return <span className={`ray ray${i + 1}`} key={i}></span>;
 						})}
 					</div>
-				</button>
+				</div>
 			</div>
 		</motion.section>
 	);

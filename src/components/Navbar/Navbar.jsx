@@ -96,7 +96,6 @@ const Navbar = () => {
 								</motion.li>
 								<motion.li variants={item}>
 									<a href="#about">
-										{' '}
 										<span className="number inverted">03.</span>Contact
 									</a>
 								</motion.li>

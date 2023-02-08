@@ -18,6 +18,7 @@
 		justify-content: center;
 		text-align: center;
 		padding-bottom: 3rem;
+		position: relative;
 
 		&--welcome {
 			font-weight: var(--font-weight-light1);
@@ -38,35 +39,49 @@
 			line-height: 1.5;
 		}
 
-		&--button {
+		&--btnContainer {
+			position: relative;
+			margin-top: 1rem;
+			padding: 0;
 			font-size: 1.2rem;
 			background-color: transparent;
-			border: 1px solid var(--color-main-1);
-			border-left-color: transparent;
+			border: none;
 			color: var(--white);
-			padding: 0.8rem 2rem;
-			padding: 0;
 			text-transform: uppercase;
 			font-weight: var(--font-weight-light1);
 			border-radius: 50vw;
 			height: 13.75rem;
 			width: 13.75rem;
-			position: relative;
 			font-size: 2rem;
-			margin-top: 1rem;
 			background-color: var(--color-main-1);
-			// box-shadow: 0px 0px 40px 12px var(--color-main-1);
 			animation: glow 3s linear alternate-reverse infinite;
-			color: black;
 			// animation: glow 10s alternate-reverse infinite;
-			z-index: 49;
+			z-index: 50;
+			&--btn {
+				width: 100%;
+				height: 100%;
+				border-radius: 50vw;
+				background-color: transparent;
+				border: none;
+				cursor: pointer;
+				font-size: 1.7rem;
+				background-color: transparent;
+				border: none;
+				color: var(--black);
+				text-transform: uppercase;
+				font-weight: var(--font-weight-light1);
+			}
 			.ray_box {
+				// background-color: red;
+				width: inherit;
+				height: inherit;
 				position: absolute;
-				top: 50%;
-				left: 50%;
-				// -webkit-animation: ray_anim 120s linear infinite;
+				// top: 0%;
+				// left: 0%;
+				top: 0%;
+				left: 0%;
 				animation: ray_anim 120s linear infinite;
-				// z-index: -1;
+				// z-index: 1;
 			}
 			.ray {
 				background: linear-gradient(
@@ -79,83 +94,84 @@
 				// margin-left: 20px;
 				// border-radius: 80% 80% 0 0;
 				// border-radius: 80%;
-				position: absolute;
+				position: relative;
+				display: block;
 				opacity: 0.15;
-				z-index: -1;
+				// z-index: -1;
 			}
 
 			.ray1 {
 				height: 170px;
 				width: 30px;
-				transform: rotate(194deg);
-				top: -175px;
+				transform: rotate(144deg);
+				top: -95px;
 				left: 15px;
 			}
 			.ray2 {
 				height: 100px;
 				width: 18px;
-				transform: rotate(235deg);
-				top: -120px;
+				transform: rotate(194deg);
+				top: 0px;
 				left: 75px;
 			}
 			.ray3 {
 				height: 193px;
 				// width: 70px;
-				width: 31px;
+				width: 21px;
 				// background-color: red;
-				transform: rotate(268deg);
-				top: -100px;
-				left: 70px;
+				transform: rotate(160deg);
+				top: -171px;
+				left: 122px;
 			}
 			.ray4 {
 				height: 100px;
 				width: 14px;
-				transform: rotate(295deg);
-				top: 25px;
-				left: 100px;
+				transform: rotate(233deg);
+				top: -321px;
+				left: 6px;
 			}
 			.ray5 {
 				height: 120px;
 				width: 15px;
-				transform: rotate(-25deg);
-				top: 60px;
-				left: 40px;
+				transform: rotate(284deg);
+				top: -534px;
+				left: -25px;
 			}
 			.ray6 {
 				height: 80px;
 				width: 20px;
-				transform: rotate(20deg);
-				top: 80px;
-				left: -60px;
+				transform: rotate(14deg);
+				top: -751px;
+				left: 119px;
 			}
 			.ray7 {
 				height: 180px;
 				width: 10px;
-				transform: rotate(48deg);
-				top: -35px;
-				left: -90px;
+				transform: rotate(104deg);
+				top: -715px;
+				left: 233px;
 			}
 			.ray8 {
 				height: 120px;
 				width: 30px;
-				transform: rotate(85deg);
-				top: -45px;
-				left: -130px;
+				transform: rotate(65deg);
+				top: -974px;
+				left: 232px;
 			}
 			.ray9 {
-				height: 80px;
+				height: 95px;
 				width: 10px;
-				transform: rotate(120deg);
-				top: -85px;
-				left: -115px;
+				transform: rotate(48deg);
+				top: -1112px;
+				left: -211px;
 				// background-color: red;
 			}
 			.ray10 {
-				height: 190px;
-				width: 23px;
-				transform: rotate(150deg);
-				top: -185px;
-				left: -60px;
+				height: 170px;
+				width: 20px;
+				transform: rotate(136deg);
+				top: -1043px;
+				left: 186px;
 			}
 
 			@keyframes ray_anim {
@@ -170,10 +186,14 @@
 			}
 			@keyframes glow {
 				from {
-					box-shadow: 0px 0px 40px 12px var(--color-main-1);
+					box-shadow: 0px 0px 40px 12px var(--color-main-1),
+						inset 0px 0px 35px 20px darken(hsl(54, 100%, 50%), 10%);
+					// box-shadow: ;
 				}
 				to {
-					box-shadow: 0px 0px 70px 15px var(--color-main-1);
+					box-shadow: 0px 0px 70px 15px var(--color-main-1),
+						inset 0px 0px 35px 20px darken(hsl(54, 100%, 50%), 10%);
+					// box-shadow: inset 0px 0px 30px 20px darken(hsl(54, 100%, 50%), 15%);
 				}
 			}
 
