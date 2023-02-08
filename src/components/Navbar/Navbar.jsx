@@ -10,7 +10,7 @@ const Navbar = () => {
 
 	useOutsideClick(menuRef, () => {
 		if (menuActive) {
-			setMenuActive(!menuActive);
+			setMenuActive(false);
 		}
 	});
 	// const scrollRef = useRef(null);
@@ -31,10 +31,13 @@ const Navbar = () => {
 			// 	stiffness: 70,
 			// },
 			transition: {
+				duration: 0.2,
 				staggerChildren: 0.25,
-				// type: 'intertia',
-				// stiffness: 1000,
-				// velocity: 150,
+				type: 'spring',
+				// stiffness: 180,
+				// bounce: 555.2,
+				damping: 15,
+				velocity: 2,
 			},
 		},
 		hidden: {
@@ -58,7 +61,7 @@ const Navbar = () => {
 		},
 	};
 	return (
-		<nav className="Navbar" ref={menuRef}>
+		<nav className="Navbar">
 			<div className="Navbar__logo">
 				<h1>
 					<span className="accentWhite">{`<`}</span>
@@ -66,10 +69,11 @@ const Navbar = () => {
 					<span className="accentWhite">{`/>`}</span>
 				</h1>
 			</div>
-			<div className="Navbar__menu">
-				<div
-					className={`Navbar__menu--toggle ${menuActive ? 'active' : ''}`}
-					onClick={() => setMenuActive(!menuActive)}>
+			<div
+				className="Navbar__menu"
+				ref={menuRef}
+				onClick={() => setMenuActive(!menuActive)}>
+				<div className={`Navbar__menu--toggle ${menuActive ? 'active' : ''}`}>
 					<span></span>
 					<span></span>
 					<span></span>
@@ -81,8 +85,7 @@ const Navbar = () => {
 							initial="hidden"
 							animate="visible"
 							exit={'hidden'}
-							variants={list}
-							ref={menuRef}>
+							variants={list}>
 							<motion.ul>
 								<motion.li variants={item}>
 									<a href="#About">

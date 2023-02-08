@@ -47,7 +47,7 @@
 	&__menu {
 		position: relative;
 		transition: all 0.3s ease-in-out;
-		z-index: 40;
+		z-index: 50;
 
 		.craters {
 			position: absolute;
@@ -235,7 +235,6 @@
 	.orbit {
 		height: 740px;
 		width: 740px;
-		/*   border: 1px solid #fff; */
 		border-radius: 100vw;
 		position: absolute;
 		margin: auto;
@@ -243,11 +242,9 @@
 		right: 0;
 		bottom: 0;
 		top: 50px;
-		// opacity: 1;
 		animation: spin 8s infinite linear;
-		// background-color: red;
-		z-index: 50;
-		// transform: rotate(215deg);
+		transform: rotate(-100deg);
+		z-index: 49;
 
 		.rocket {
 			background-color: hsla(84, 45%, 98%, 100%);
@@ -255,12 +252,10 @@
 			width: 50px;
 			border-radius: 50% 50% 0 0;
 			position: relative;
-			// margin: auto;
 			left: -20px;
 			top: 20px;
 			transform: rotate(38deg);
 			z-index: -1;
-			// z-index: -1;
 			&::before {
 				content: '';
 				position: absolute;
@@ -271,31 +266,33 @@
 				border-radius: 12px 12px 0px 0px;
 				bottom: -2px;
 				left: -41px;
-				// opacity: 0.5;
-				// z-index: -1;
 			}
 			&::before {
 				content: '';
 				position: absolute;
-				// background-color: red;
 				mix-blend-mode: overlay;
 				width: 130px;
 				height: 50px;
 				z-index: 1;
 				bottom: 0;
+				background-color: #52c8ff;
 			}
 
 			&::after {
 				content: '';
 				position: absolute;
 				background-color: hsl(0, 0%, 100%);
-				background-color: #ff3300cc;
-				height: 14px;
-				width: 35px;
-				border-radius: 0 0 12px 12px;
-				bottom: -16px;
-				left: 7.3px;
-				bottom: -14px;
+				background: linear-gradient(
+					0deg,
+					#52c8ffcc 10%,
+					#7ed4fccc 40%,
+					#ff6600fb 100%
+				);
+				height: 30px;
+				width: 30px;
+				border-radius: 0 0 23px 23px;
+				bottom: -30px;
+				left: 9.3px;
 				z-index: -1;
 			}
 

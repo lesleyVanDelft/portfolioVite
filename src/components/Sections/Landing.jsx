@@ -2,6 +2,7 @@ import blobSvg from '../../assets/img/blobanimation.svg';
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import YellowAccent from '../YellowAccent';
+import pageTransitionImg from '../../assets/img/pageTransition.png';
 
 const variants = {
 	hidden: {
@@ -25,18 +26,16 @@ const Landing = ({ scrollToAbout }) => {
 					beautiful websites.
 				</p>
 
-				<div className="Landing__content--btnContainer">
-					<button
-						className="Landing__content--btnContainer--btn btnPrimary"
-						onClick={() => scrollToAbout()}>
-						<span>About me &#8595;</span>
-					</button>
+				<button
+					className="Landing__content--button btnPrimary"
+					onClick={() => scrollToAbout()}>
+					<span>About me &#8595;</span>
 					<div className="ray_box">
 						{test.map((el, i) => {
 							return <span className={`ray ray${i + 1}`} key={i}></span>;
 						})}
 					</div>
-				</div>
+				</button>
 			</div>
 		</motion.section>
 	);
