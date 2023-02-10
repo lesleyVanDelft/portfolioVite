@@ -7,7 +7,7 @@ import mockupFeedback from './assets/img/mockupFeedback.png';
 export const projectList = [
 	{
 		title: 'Feedback Board',
-		tech: ['React', 'Sass', 'Node', 'Express', 'MongoDB'],
+		tech: ['React', 'Sass', 'Node', 'Express'],
 		image: mockupFeedback,
 		description: 'A simple static site using React number 4.  ',
 	},
