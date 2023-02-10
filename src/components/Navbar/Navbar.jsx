@@ -47,7 +47,7 @@ const Navbar = () => {
 			// translateY: 130,
 			// translateX: 0,
 			transition: {
-				duration: 0.25,
+				// duration: 0.25,
 				// staggerChildren: 0.01,
 			},
 		},
