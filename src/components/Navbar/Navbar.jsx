@@ -32,7 +32,7 @@ const Navbar = () => {
 			// },
 			transition: {
 				// duration: 0.2,
-				staggerChildren: 0.25,
+				// staggerChildren: 0.25,
 				// type: 'inertia',/
 				// stiffness: 180,
 				// bounce: 555.2,
@@ -85,19 +85,22 @@ const Navbar = () => {
 							variants={list}>
 							<motion.ul>
 								<motion.li variants={item}>
-									<a href="#About">
-										<span className="number inverted">01.</span> About Me
-									</a>
+									<motion.a href="#About">
+										<motion.span className="number inverted">01.</motion.span>{' '}
+										About Me
+									</motion.a>
 								</motion.li>
 								<motion.li variants={item}>
-									<a href="#projects">
-										<span className="number inverted">02.</span>Projects
-									</a>
+									<motion.a href="#projects">
+										<motion.span className="number inverted">02.</motion.span>
+										Projects
+									</motion.a>
 								</motion.li>
 								<motion.li variants={item}>
-									<a href="#about">
-										<span className="number inverted">03.</span>Contact
-									</a>
+									<motion.a href="#about">
+										<motion.span className="number inverted">03.</motion.span>
+										Contact
+									</motion.a>
 								</motion.li>
 							</motion.ul>
 							<motion.div className="craters">
