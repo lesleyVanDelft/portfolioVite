@@ -33,11 +33,11 @@ const Navbar = () => {
 			transition: {
 				duration: 0.2,
 				staggerChildren: 0.25,
-				type: 'spring',
+				// type: 'inertia',/
 				// stiffness: 180,
 				// bounce: 555.2,
-				damping: 15,
-				velocity: 2,
+				// damping: 15,
+				// velocity: 2,
 			},
 		},
 		hidden: {
