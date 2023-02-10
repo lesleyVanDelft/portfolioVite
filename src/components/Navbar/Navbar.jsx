@@ -31,7 +31,7 @@ const Navbar = () => {
 			// 	stiffness: 70,
 			// },
 			transition: {
-				duration: 0.2,
+				// duration: 0.2,
 				staggerChildren: 0.25,
 				// type: 'inertia',/
 				// stiffness: 180,
@@ -47,7 +47,7 @@ const Navbar = () => {
 			translateY: 130,
 			translateX: 0,
 			transition: {
-				duration: 0.25,
+				// duration: 0.25,
 				// staggerChildren: 0.01,
 			},
 		},

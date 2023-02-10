@@ -10,13 +10,20 @@ const variants = {
 	},
 	show: {
 		opacity: 1,
+		transition: {
+			duration: 0.75,
+		},
 	},
 };
 
 const Landing = ({ scrollToAbout }) => {
 	const test = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 	return (
-		<motion.section className="Landing">
+		<motion.section
+			className="Landing"
+			variants={variants}
+			initial="hidden"
+			animate="show">
 			<div className="Landing__content">
 				<h3 className="Landing__content--welcome">Hi there!</h3>
 				<h2 className="Landing__content--name">My name is Lesley.</h2>
