@@ -29,5 +29,7 @@ export const projectList = [
 		tech: ['React', 'Sass'],
 		image: mockupPhotosnap,
 		description: 'A simple static site using React number 3.  ',
+		linkGithub: 'https://github.com/lesleyVanDelft/PhotoSnap',
+		linkLive: '',
 	},
 ];
