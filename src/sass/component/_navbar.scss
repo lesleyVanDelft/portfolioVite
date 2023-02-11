@@ -47,7 +47,6 @@
 
 	&__menu {
 		position: relative;
-		// transition: all 0.3s ease-in-out;
 		z-index: 51;
 		width: 40px;
 		height: 40px;
@@ -58,9 +57,11 @@
 
 		.craters {
 			position: absolute;
-
-			left: 14rem;
-			bottom: 7rem;
+			left: 13.8rem;
+			bottom: -5rem;
+			width: 100%;
+			height: 100%;
+			z-index: 500;
 			.crater {
 				background-color: hsla(0, 2%, 71%, 0.5);
 				height: 70px;
@@ -77,13 +78,12 @@
 					box-shadow: inset 12px -8px 0 0px rgb(161 161 161 / 50%);
 					top: 0px;
 					left: 0px;
-					z-index: 49;
+					z-index: 502;
 				}
 			}
 			.crater1 {
 				top: 227px;
 				left: -190px;
-				// transform: scale(1.5) rotate(-40deg);
 				height: calc(70px * 1.5);
 				width: calc(70px * 1.5);
 
@@ -95,7 +95,6 @@
 			.crater2 {
 				bottom: -35px;
 				left: -35px;
-				// transform: scale(0.7) rotate(-30deg);
 				height: calc(70px * 0.7);
 				width: calc(70px * 0.7);
 				&::before {
@@ -106,8 +105,6 @@
 			.crater3 {
 				left: 98px;
 				top: -19px;
-
-				// transform: scale(1.65) rotate(-40deg);
 
 				height: calc(70px * 1.65);
 				width: calc(70px * 1.65);
@@ -120,12 +117,8 @@
 			.crater4 {
 				top: 103px;
 				left: 128px;
-				// transform: scale(1.5) rotate(-70deg);
-				// height: 60px;
-				// width: 60px;
 				height: calc(70px * 1.5);
 				width: calc(70px * 1.5);
-				// transform: scale(1.5) rotate(-70deg);
 				&::before {
 					box-shadow: inset -4px -17px 0 2px rgb(161 161 161 / 70%);
 				}
@@ -134,10 +127,8 @@
 			.crater5 {
 				top: 52px;
 				left: -52px;
-				// transform: scale(0.8) rotate(-40deg);
 				height: calc(70px * 0.8);
 				width: calc(70px * 0.8);
-				// transform: scale(0.8) rotate(-40deg);
 				&::before {
 					box-shadow: inset 6px -13px 0 0px rgb(161 161 161 / 100%);
 				}
@@ -146,11 +137,7 @@
 
 		&--mobile {
 			position: absolute;
-			right: -10rem;
-			top: -6rem;
-			// background-color: var(--color-main-1);
 			background-color: rgb(240, 240, 240);
-
 			font-size: 1.5rem;
 			display: flex;
 			align-items: center;
@@ -162,34 +149,32 @@
 			padding-top: 4rem;
 			box-shadow: inset -40px -40px 90px 90px hsla(0, 0%, 63%, 0.714),
 				0px 0px 20px 5px hsla(0, 0%, 100%, 0.714);
-			// width: 39rem;
-			// height: 39rem;
 			animation: boxshadowPulse 6s alternate-reverse infinite;
+			width: 0;
+			height: 0;
 
-			// &::before {
-			// 	content: '';
-			// 	position: absolute;
-			// 	width: 100%;
-			// 	height: 100%;
-			// 	border-radius: 100vw;
-			// 	// box-shadow: inset 40px -20px 81px 12px #868686;
-			// 	top: 0px;
-			// 	left: 0px;
-			// 	z-index: 500;
-			// }
+			&[data-isopen='true'] {
+				width: 624px;
+				height: 624px;
+			}
+			&[data-isopen='false'] {
+				width: 0px;
+				height: 0px;
+			}
 
 			ul {
 				padding-top: 7rem;
-				padding-right: 2rem;
+				padding-right: 4rem;
 				width: fit-content;
 				height: 45%;
 				display: flex;
 				flex-direction: column;
 				align-items: flex-start;
 				justify-content: space-around;
-				z-index: 100;
+				z-index: 501;
 			}
 			li {
+				width: 100%;
 				font-size: 1.6rem;
 				font-weight: 400;
 				font-family: var(--font-menu);
@@ -205,8 +190,6 @@
 					.number {
 						letter-spacing: normal;
 					}
-
-					width: 100%;
 				}
 			}
 		}
@@ -217,9 +200,7 @@
 			align-items: flex-end;
 			height: 20px;
 			width: 30px;
-			z-index: 100;
 			position: relative;
-			// transition: all 0.3s ease-in-out;
 			cursor: pointer;
 			z-index: 51;
 			-webkit-tap-highlight-color: transparent;
