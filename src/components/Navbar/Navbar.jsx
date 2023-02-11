@@ -23,27 +23,27 @@ const Navbar = () => {
 			opacity: 1,
 			height: 624,
 			width: 624,
-			// translateY: -130,
-			// translateX: 100,
+			translateY: -130,
+			translateX: 100,
 			// transition: {
 			// 	duration: 0.1,
 			// 	type: 'spring',
 			// 	stiffness: 70,
 			// },
-			transition: {
-				// duration: 0.2,
-				// staggerChildren: 0.25,
-				// type: 'inertia',/
-				// stiffness: 180,
-				// bounce: 555.2,
-				// damping: 15,
-				// velocity: 2,
-			},
+			// transition: {
+			// duration: 0.2,
+			// staggerChildren: 0.25,
+			// type: 'inertia',/
+			// stiffness: 180,
+			// bounce: 555.2,
+			// damping: 15,
+			// velocity: 2,
+			// },
 		},
 		hidden: {
 			opacity: 0,
-			height: 10,
-			width: 10,
+			// height: 10,
+			// width: 10,
 			// translateY: 130,
 			// translateX: 0,
 			transition: {
