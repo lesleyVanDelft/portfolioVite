@@ -8,11 +8,11 @@ const Navbar = () => {
 	const [menuActive, setMenuActive] = useState(false);
 	const menuRef = useRef(null);
 
-	// useOutsideClick(menuRef, () => {
-	// 	if (menuActive) {
-	// 		setMenuActive(false);
-	// 	}
-	// });
+	useOutsideClick(menuRef, () => {
+		if (menuActive) {
+			setMenuActive(false);
+		}
+	});
 	// const scrollRef = useRef(null);
 
 	// const scrollToAbout = () => {
@@ -21,35 +21,13 @@ const Navbar = () => {
 	const list = {
 		visible: {
 			opacity: 1,
-			height: 624,
-			width: 624,
-			translateY: -130,
-			translateX: 100,
-			// transition: {
-			// 	duration: 0.1,
-			// 	type: 'spring',
-			// 	stiffness: 70,
-			// },
-			// transition: {
-			// duration: 0.2,
-			// staggerChildren: 0.25,
-			// type: 'inertia',/
-			// stiffness: 180,
-			// bounce: 555.2,
-			// damping: 15,
-			// velocity: 2,
-			// },
+			translateY: 72,
+			translateX: -25,
 		},
 		hidden: {
 			opacity: 0,
-			// height: 10,
-			// width: 10,
-			// translateY: 130,
-			// translateX: 0,
-			transition: {
-				// duration: 0.25,
-				// staggerChildren: 0.01,
-			},
+			translateY: -92,
+			translateX: 120,
 		},
 	};
 
@@ -69,7 +47,10 @@ const Navbar = () => {
 					<span className="accentWhite">{`/>`}</span>
 				</h1>
 			</div>
-			<div className="Navbar__menu" onClick={() => setMenuActive(!menuActive)}>
+			<div
+				className="Navbar__menu"
+				ref={menuRef}
+				onClick={() => setMenuActive(!menuActive)}>
 				<div className={`Navbar__menu--toggle ${menuActive ? 'active' : ''}`}>
 					<span></span>
 					<span></span>
@@ -78,6 +59,7 @@ const Navbar = () => {
 				<AnimatePresence>
 					{menuActive && (
 						<motion.nav
+							data-isopen={menuActive}
 							className={`Navbar__menu--mobile ${menuActive ? 'active' : ''}`}
 							initial="hidden"
 							animate="visible"
@@ -103,23 +85,23 @@ const Navbar = () => {
 									</motion.a>
 								</motion.li>
 							</motion.ul>
-							<motion.div className="craters">
-								<motion.div className="crater crater1"></motion.div>
-								<motion.div className="crater crater2"></motion.div>
-								<motion.div className="crater crater3"></motion.div>
-								<motion.div className="crater crater4"></motion.div>
-								<motion.div className="crater crater5"></motion.div>
-							</motion.div>
+							<div className="craters">
+								<div className="crater crater1"></div>
+								<div className="crater crater2"></div>
+								<div className="crater crater3"></div>
+								<div className="crater crater4"></div>
+								<div className="crater crater5"></div>
+							</div>
 						</motion.nav>
 					)}
 				</AnimatePresence>
 			</div>
 			{menuActive && (
-				<div className="orbit">
-					<div className="rocket">
-						<div className="window"></div>
-					</div>
-				</div>
+				<motion.div className="orbit">
+					<motion.div className="rocket">
+						<motion.div className="window"></motion.div>
+					</motion.div>
+				</motion.div>
 			)}
 			{menuActive && <Overlay />}
 		</nav>
