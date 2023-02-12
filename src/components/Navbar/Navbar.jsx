@@ -129,13 +129,15 @@ const Navbar = () => {
 				<AnimatePresence>
 					<motion.div
 						className="orbit"
-						variants={orbitVariant}
-						initial="initial"
-						animate="visible">
+						// variants={orbitVariant}
+						// initial="initial"
+						// animate="visible"
+					>
 						<motion.div
 							className="rocket"
-							variants={rocketVariant}
-							initial={'initial'}>
+							// variants={rocketVariant}
+							// initial={'initial'}
+						>
 							<motion.div className="window"></motion.div>
 						</motion.div>
 					</motion.div>
