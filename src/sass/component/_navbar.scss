@@ -255,8 +255,8 @@
 		right: 0;
 		bottom: 0;
 		top: 50px;
-		animation: spin 8s infinite linear;
-		transform: rotate(-100deg);
+		// animation: spin 8s infinite linear;
+		// transform: rotate(-100deg);
 		z-index: 49;
 
 		.rocket {
@@ -267,7 +267,7 @@
 			position: relative;
 			left: -20px;
 			top: 20px;
-			transform: rotate(38deg);
+			// transform: rotate(38deg);
 			z-index: -1;
 			&::before {
 				content: '';

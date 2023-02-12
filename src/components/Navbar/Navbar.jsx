@@ -18,7 +18,7 @@ const Navbar = () => {
 	// const scrollToAbout = () => {
 	// 	scrollRef.current.scrollIntoView({ behavior: 'smooth' });
 	// };
-	const list = {
+	const menuVariant = {
 		visible: {
 			opacity: 1,
 			translateY: 72,
@@ -37,6 +37,35 @@ const Navbar = () => {
 		transition: {
 			duration: 1,
 		},
+	};
+
+	const orbitVariant = {
+		initial: {
+			rotate: -170,
+		},
+
+		visible: {
+			rotate: 120,
+			transition: {
+				duration: 10,
+				repeat: Infinity,
+				ease: 'linear',
+			},
+		},
+	};
+	const rocketVariant = {
+		initial: {
+			rotate: 36,
+		},
+
+		// visible: {
+		// 	rotate: 120,
+		// 	transition: {
+		// 		duration: 9,
+		// 		repeat: Infinity,
+		// 		ease: 'linear',
+		// 	},
+		// },
 	};
 	return (
 		<nav className="Navbar">
@@ -64,7 +93,7 @@ const Navbar = () => {
 							initial="hidden"
 							animate="visible"
 							exit={'hidden'}
-							variants={list}>
+							variants={menuVariant}>
 							<motion.ul>
 								<motion.li variants={item}>
 									<a href="#About">
@@ -94,11 +123,20 @@ const Navbar = () => {
 				</AnimatePresence>
 			</div>
 			{menuActive && (
-				<motion.div className="orbit">
-					<motion.div className="rocket">
-						<motion.div className="window"></motion.div>
+				<AnimatePresence>
+					<motion.div
+						className="orbit"
+						variants={orbitVariant}
+						initial="initial"
+						animate="visible">
+						<motion.div
+							className="rocket"
+							variants={rocketVariant}
+							initial={'initial'}>
+							<motion.div className="window"></motion.div>
+						</motion.div>
 					</motion.div>
-				</motion.div>
+				</AnimatePresence>
 			)}
 			{menuActive && <Overlay />}
 		</nav>

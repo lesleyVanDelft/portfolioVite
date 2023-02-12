@@ -16,6 +16,33 @@ const variants = {
 	},
 };
 
+const sunVariant = {
+	initial: {
+		// rotate: -90,
+		scale: 0,
+		opacity: 0,
+		transition: {
+			scale: { delay: 1, duration: 1, type: 'linear' },
+		},
+	},
+	animate: {
+		// rotate: 0,
+		opacity: 1,
+		// type: 'spring',
+		scale: 1,
+
+		transition: {
+			scale: {
+				duration: 1,
+			},
+			delay: 1,
+			type: 'spring',
+			// stiffness: 10,
+			// bounce: 50,/
+		},
+	},
+};
+
 const Landing = ({ scrollToAbout }) => {
 	const test = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 	return (
@@ -33,8 +60,11 @@ const Landing = ({ scrollToAbout }) => {
 					beautiful websites.
 				</p>
 
-				<button
+				<motion.button
 					className="Landing__content--button btnPrimary"
+					variants={sunVariant}
+					initial="initial"
+					animate="animate"
 					onClick={() => scrollToAbout()}>
 					<span>About me &#8595;</span>
 					<div className="ray_box">
@@ -42,7 +72,7 @@ const Landing = ({ scrollToAbout }) => {
 							return <span className={`ray ray${i + 1}`} key={i}></span>;
 						})}
 					</div>
-				</button>
+				</motion.button>
 			</div>
 		</motion.section>
 	);

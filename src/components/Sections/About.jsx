@@ -1,11 +1,37 @@
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 const About = ({ refProps, scrollToProjects }) => {
+	const viewRef = useRef(null);
+	const isInView = useInView(viewRef);
+
+	const draw = {
+		hidden: { pathLength: 0, opacity: 0 },
+		visible: i => {
+			const delay = 1 + i * 0.3;
+			return {
+				pathLength: 1,
+				opacity: 1,
+				transition: {
+					pathLength: {
+						delay,
+						type: 'spring',
+						duration: 1.5,
+						bounce: 0,
+						ease: 'easeIn',
+					},
+					opacity: { delay, duration: 0.01 },
+				},
+			};
+		},
+	};
+
 	return (
 		<section className="About" ref={refProps} id={'About'}>
 			<h3 className="About__title pageTitle">
 				<span className="number">01.</span>
 				<p>About Me</p>
 			</h3>
-			<div className="About__content">
+			<div className="About__content" ref={viewRef}>
 				<p>
 					After working several jobs in the transport and logistics industry, I
 					realized I wanted to work somewhere a bit more mentally stimulating.
@@ -32,11 +58,31 @@ const About = ({ refProps, scrollToProjects }) => {
 					{/* I finally found my true
 					passion; making beautiful interactive, animated, responsive websites. */}
 				</p>
-				<button
-					className="Landing__content--button btnPrimary"
-					onClick={() => scrollToProjects()}>
-					Projects &#8595;
-				</button>
+
+				<motion.svg
+					width="250px"
+					height="250px"
+					viewBox="0 0 500 600"
+					initial="hidden"
+					animate={`${isInView ? 'visible' : ''}`}>
+					<motion.circle
+						cx="65%"
+						cy="50%"
+						r="40%"
+						stroke="var(--color-main-1)"
+						strokeWidth={8}
+						fill={'none'}
+						variants={draw}
+						custom={1}
+					/>
+					<foreignObject width={'100%'} height={'50%'} x={'17%'} y={'23%'}>
+						<button
+							className="About__content--button btnCta"
+							onClick={() => scrollToProjects()}>
+							Projects &#8595;
+						</button>
+					</foreignObject>
+				</motion.svg>
 			</div>
 		</section>
 	);
