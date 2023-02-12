@@ -152,7 +152,7 @@
 			padding-top: 4rem;
 			box-shadow: inset -40px -40px 90px 90px hsla(0, 0%, 63%, 0.714),
 				0px 0px 20px 5px hsla(0, 0%, 100%, 0.714);
-			animation: boxshadowPulse 6s alternate-reverse infinite;
+			// animation: boxshadowPulse 6s alternate-reverse infinite;
 			// width: 0;
 			// height: 0;
 			transition: all 0.4s ease-in-out;
@@ -361,7 +361,7 @@
 			transform: rotate(120deg);
 		}
 		100% {
-			opacity: 1;
+			// opacity: 1;
 			transform: rotate(360deg);
 		}
 	}
