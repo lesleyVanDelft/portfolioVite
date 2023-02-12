@@ -27,6 +27,7 @@ html {
 body {
 	color: var(--white);
 	width: 100%;
+	min-height: 100%;
 }
 html {
 	height: -webkit-fill-available;
@@ -64,7 +65,7 @@ section {
 .App {
 	transition: all 0.2s ease-in-out;
 	scroll-behavior: smooth;
-	height: 100vh;
+	min-height: 100vh;
 	width: 100vw;
 	position: relative;
 	max-height: -webkit-fill-available;

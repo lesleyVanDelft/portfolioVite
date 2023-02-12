@@ -40,6 +40,7 @@ html {
 body {
 	color: var(--white);
 	width: 100%;
+	min-height: 100%;
 }
 html {
 	height: -webkit-fill-available;
@@ -71,7 +72,7 @@ section {
 .App {
 	transition: all 0.2s ease-in-out;
 	scroll-behavior: smooth;
-	height: 100vh;
+	min-height: 100vh;
 	width: 100vw;
 	position: relative;
 	max-height: -webkit-fill-available;
@@ -148,6 +149,17 @@ section {
 	background-color: rgba(0, 0, 0, 0);
 	border: 1px solid var(--color-main-1);
 	color: var(--white);
+	padding: 0;
+	text-transform: uppercase;
+	border-radius: 50vw;
+	height: 10.75rem;
+	width: 10.75rem;
+	position: relative;
+	font-size: 1.5rem;
+	font-family: var(--font-main);
+	font-weight: var(--font-weight-light2);
+	z-index: 49;
+	align-self: center;
 }
 .btnCta:last-child {
 	margin: 0;
@@ -397,8 +409,6 @@ section {
 	right: 0;
 	bottom: 0;
 	top: 50px;
-	animation: spin 8s infinite linear;
-	transform: rotate(-100deg);
 	z-index: 49;
 }
 .Navbar .orbit .rocket {
@@ -409,7 +419,6 @@ section {
 	position: relative;
 	left: -20px;
 	top: 20px;
-	transform: rotate(38deg);
 	z-index: -1;
 }
 .Navbar .orbit .rocket::before {
@@ -502,17 +511,6 @@ section {
 	background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)),
 		url('../../assets/img/galaxy2.jpg') no-repeat 75% center/cover;
 }
-.Landing::after {
-	content: '';
-	position: absolute;
-	bottom: -3rem;
-	left: 0;
-	width: 100%;
-	height: 12rem;
-	background: url('../../assets/img/pageTransition.png') no-repeat center
-		center/cover;
-	opacity: 0.8;
-}
 .Landing__content {
 	width: 100%;
 	height: 100%;
@@ -523,22 +521,23 @@ section {
 	text-align: center;
 	padding-bottom: 3rem;
 	position: relative;
+	padding-top: 1rem;
 }
 .Landing__content--welcome {
 	font-weight: var(--font-weight-light1);
-	font-size: 2.2rem;
+	font-size: 2.7rem;
 	line-height: 2;
-	margin-top: 3.5rem;
 }
 .Landing__content--name {
-	margin-top: 0.5rem;
 	font-size: 2.8rem;
 	font-weight: var(--font-weight-light2);
 }
 .Landing__content--description {
 	font-size: 2rem;
-	margin: 3rem 0 5rem 0;
+	margin: 3.5rem 0 5.5rem 0;
 	line-height: 1.5;
+	letter-spacing: 0.5px;
+	font-family: var(--font-main);
 }
 .Landing__content--button {
 	border: none;
@@ -596,7 +595,7 @@ section {
 .Landing__content--button .ray4 {
 	height: 100px;
 	width: 14px;
-	transform: rotate(295deg);
+	transform: rotate(309deg);
 	top: 25px;
 	left: 100px;
 }
@@ -617,7 +616,7 @@ section {
 .Landing__content--button .ray7 {
 	height: 180px;
 	width: 10px;
-	transform: rotate(48deg);
+	transform: rotate(57deg);
 	top: -35px;
 	left: -90px;
 }
@@ -714,7 +713,7 @@ section {
 	width: -moz-fit-content;
 	width: fit-content;
 	max-height: 3rem;
-	flex-wrap: nowrap;
+	flex-wrap: wrap;
 }
 .Projects__item--technologies p {
 	background-color: rgba(255, 255, 255, 0.259);
@@ -774,8 +773,18 @@ section {
 	font-weight: 300;
 	font-family: var(--font-menu);
 }
+.About__content p:last-of-type {
+	margin-bottom: 0.2rem;
+}
+.About__content circle {
+	position: relative;
+}
 .About__content button {
 	margin-top: 1.5rem;
+	border: none;
+	font-size: 3.65rem;
+	width: 100%;
+	height: 100%;
 }
 .Container {
 	height: 100%;
