@@ -85,63 +85,63 @@ const Navbar = () => {
 					<span></span>
 					<span></span>
 				</div>
-				<AnimatePresence>
-					{menuActive && (
-						<motion.nav
-							data-isopen={menuActive}
-							className={`Navbar__menu--mobile ${menuActive ? 'active' : ''}`}
-							initial="hidden"
-							animate="visible"
-							exit={'hidden'}
-							variants={menuVariant}>
-							<motion.ul>
-								<motion.li variants={item}>
-									<motion.a href="#About">
-										<motion.span className="number inverted">01.</motion.span>{' '}
-										About Me
-									</motion.a>
-								</motion.li>
-								<motion.li variants={item}>
-									<motion.a href="#projects">
-										<motion.span className="number inverted">02.</motion.span>
-										Projects
-									</motion.a>
-								</motion.li>
-								<motion.li variants={item}>
-									<motion.a href="#about">
-										<motion.span className="number inverted">03.</motion.span>
-										Contact
-									</motion.a>
-								</motion.li>
-							</motion.ul>
-							<div className="craters">
-								<div className="crater crater1"></div>
-								<div className="crater crater2"></div>
-								<div className="crater crater3"></div>
-								<div className="crater crater4"></div>
-								<div className="crater crater5"></div>
-							</div>
-						</motion.nav>
-					)}
-				</AnimatePresence>
+				{/* <AnimatePresence> */}
+				{/* {menuActive && ( */}
+				<nav
+					data-isopen={menuActive}
+					className={`Navbar__menu--mobile ${menuActive ? 'active' : ''}`}
+					// initial="hidden"
+					// animate="visible"
+					// exit={'hidden'}
+					// variants={menuVariant}
+				>
+					<ul>
+						<li variants={item}>
+							<a href="#About">
+								<span className="number inverted">01.</span> About Me
+							</a>
+						</li>
+						<li variants={item}>
+							<a href="#projects">
+								<span className="number inverted">02.</span>
+								Projects
+							</a>
+						</li>
+						<li variants={item}>
+							<a href="#about">
+								<span className="number inverted">03.</span>
+								Contact
+							</a>
+						</li>
+					</ul>
+					<div className="craters">
+						<div className="crater crater1"></div>
+						<div className="crater crater2"></div>
+						<div className="crater crater3"></div>
+						<div className="crater crater4"></div>
+						<div className="crater crater5"></div>
+					</div>
+				</nav>
+				{/* )} */}
+				{/* </AnimatePresence> */}
 			</div>
 			{menuActive && (
-				<AnimatePresence>
-					<motion.div
-						className="orbit"
-						// variants={orbitVariant}
-						// initial="initial"
-						// animate="visible"
+				// <AnimatePresence>
+				<div
+					className="orbit"
+					// variants={orbitVariant}
+					// initial="initial"
+					// animate="visible"
+				>
+					<div
+						className="rocket"
+						// variants={rocketVariant}
+						// initial={'initial'}
 					>
-						<motion.div
-							className="rocket"
-							// variants={rocketVariant}
-							// initial={'initial'}
-						>
-							<motion.div className="window"></motion.div>
-						</motion.div>
-					</motion.div>
-				</AnimatePresence>
+						<div className="window"></div>
+					</div>
+				</div>
+				// </AnimatePresence>
 			)}
 			{menuActive && <Overlay />}
 		</nav>

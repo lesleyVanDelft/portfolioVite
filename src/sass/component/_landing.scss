@@ -46,7 +46,7 @@
 
 		&--description {
 			font-size: 2rem;
-			margin: 3.5rem 0 5.5rem 0;
+			margin: 3.5rem 0 6.5rem 0;
 			line-height: 1.5;
 			letter-spacing: 0.5px;
 			font-family: var(--font-main);
@@ -55,18 +55,28 @@
 		&--button {
 			border: none;
 			padding: 0;
+			padding-bottom: 0.5rem;
 			text-transform: uppercase;
 			border-radius: 50vw;
-			height: 10.75rem;
-			width: 10.75rem;
+			height: 9.75rem;
+			width: 9.75rem;
 			position: relative;
 			font-size: 1.5rem;
 			font-family: var(--font-main);
 			font-weight: var(--font-weight-light2);
-			background-color: var(--color-main-1);
+			// background-color: var(--color-main-1);
 			// background-color: black;
-			animation: glow 3s linear alternate-reverse infinite;
-			color: var(--black);
+			border: 5px solid hsla(54, 100%, 50%, 0.2);
+			// border-color: rgba(255, 255, 0, 1);
+			box-shadow: 0px 0px 103px 0px var(--color-main-1),
+				0px 0px 121px 0px rgba(255, 255, 0, 1),
+				0px 0px 100px 14px rgba(255, 255, 0, 0.245),
+				inset 0px 0px 0px 5px var(--color-main-1);
+			// animation: glow 3s linear alternate-reverse infinite;
+			color: var(--white);
+			font-family: var(--font-main);
+			font-weight: var(--font-weight-light2);
+			font-size: 1.5rem;
 			z-index: 49;
 			.ray_box {
 				// height: 10.75rem;
@@ -79,39 +89,39 @@
 			.ray {
 				background: linear-gradient(
 					to bottom,
-					rgba(229, 255, 0, 0) 20%,
+					rgba(229, 255, 0, 0) 30%,
 					rgba(255, 238, 0, 0.8) 70%,
 					rgba(255, 251, 0, 0) 100%
 				);
 				position: absolute;
 				// display: inline-block;
-				opacity: 0.15;
+				opacity: 0.25;
 			}
 
 			.ray1 {
-				height: 170px;
+				height: 176px;
 				width: 30px;
-				transform: rotate(194deg);
+				transform: rotate(193deg);
 				// top: 0px;
 				// left: 0px;
-				top: -175px;
-				left: 15px;
+				top: -199px;
+				left: 7px;
 			}
 			.ray2 {
-				height: 100px;
+				height: 134px;
 				width: 18px;
-				transform: rotate(235deg);
-				top: -120px;
-				left: 75px;
+				transform: rotate(232deg);
+				top: -154px;
+				left: 91px;
 				// top: 0px;
 				// left: 0px;
 			}
 			.ray3 {
-				height: 193px;
+				height: 143px;
 				width: 35px;
-				transform: rotate(268deg);
-				top: -100px;
-				left: 70px;
+				transform: rotate(267deg);
+				top: -78px;
+				left: 105px;
 				// top: 0px;
 				// left: 0px;
 			}
@@ -134,29 +144,29 @@
 				// left: 0px;
 			}
 			.ray6 {
-				height: 106px;
+				height: 130px;
 				width: 20px;
-				transform: rotate(20deg);
-				top: 80px;
-				left: -60px;
+				transform: rotate(16deg);
+				top: 57px;
+				left: -38px;
 				// top: 0px;
 				// left: 0px;
 			}
 			.ray7 {
-				height: 180px;
+				height: 117px;
 				width: 10px;
-				transform: rotate(57deg);
-				top: -35px;
-				left: -90px;
+				transform: rotate(44deg);
+				top: 23px;
+				left: -86px;
 				// top: 0px;
 				// left: 0px;
 			}
 			.ray8 {
-				height: 120px;
+				height: 130px;
 				width: 25px;
 				transform: rotate(85deg);
-				top: -45px;
-				left: -130px;
+				top: -50px;
+				left: -146px;
 				// top: 0px;
 				// left: 0px;
 			}
@@ -172,7 +182,7 @@
 			.ray10 {
 				height: 190px;
 				width: 23px;
-				transform: rotate(150deg);
+				transform: rotate(151deg);
 				top: -185px;
 				left: -60px;
 				// top: 0px;
@@ -189,12 +199,20 @@
 			}
 			@keyframes glow {
 				from {
-					box-shadow: 0px 0px 40px 12px var(--color-main-1),
-						inset 0px 0px 35px 20px rgba(255, 230, 0, 0.1);
+					// box-shadow: 0px 0px 40px 12px var(--color-main-1),
+					// 	inset 0px 0px 35px 20px rgba(255, 230, 0, 0.1);
+					box-shadow: 0px 0px 103px 0px var(--color-main-1),
+						0px 0px 121px 0px rgba(255, 255, 0, 1),
+						0px 0px 100px 14px rgba(255, 255, 0, 0.245),
+						inset 0px 0px 0px 5px var(--color-main-1);
 				}
 				to {
-					box-shadow: 0px 0px 70px 15px var(--color-main-1),
-						inset 0px 0px 35px 20px rgba(255, 230, 0, 0.1);
+					// box-shadow: 0px 0px 70px 15px var(--color-main-1),
+					// 	inset 0px 0px 35px 20px rgba(255, 230, 0, 0.1);
+					box-shadow: 0px 0px 103px 0px var(--color-main-1),
+						0px 0px 121px 10px rgba(255, 255, 0, 1),
+						0px 0px 100px 14px rgba(255, 255, 0, 0.245),
+						inset 0px 0px 0px 5px var(--color-main-1);
 				}
 			}
 		}

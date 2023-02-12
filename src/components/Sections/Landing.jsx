@@ -19,23 +19,25 @@ const variants = {
 const sunVariant = {
 	initial: {
 		// rotate: -90,
-		scale: 0,
+		// scale: 0,
 		opacity: 0,
 		transition: {
 			scale: { delay: 1, duration: 1, type: 'linear' },
+			opacity: { duration: 2, ease: 'easeIn' },
 		},
 	},
 	animate: {
 		// rotate: 0,
 		opacity: 1,
 		// type: 'spring',
-		scale: 1,
+		// scale: 1,
 
 		transition: {
 			scale: {
 				duration: 1,
 			},
-			delay: 1,
+			opacity: { duration: 2, ease: 'easeIn' },
+			// delay: 1,
 			type: 'spring',
 			// stiffness: 10,
 			// bounce: 50,/
@@ -66,7 +68,8 @@ const Landing = ({ scrollToAbout }) => {
 					initial="initial"
 					animate="animate"
 					onClick={() => scrollToAbout()}>
-					<span>About me &#8595;</span>
+					<span>About me</span>
+					{/* <span>About me &#8595;</span> */}
 					<div className="ray_box">
 						{test.map((el, i) => {
 							return <span className={`ray ray${i + 1}`} key={i}></span>;
