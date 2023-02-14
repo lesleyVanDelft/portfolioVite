@@ -66,12 +66,14 @@
 			font-weight: var(--font-weight-light2);
 			// background-color: var(--color-main-1);
 			// background-color: black;
-			border: 5px solid hsla(54, 100%, 50%, 0.2);
+			border: 5px solid hsla(54, 100%, 50%, 0);
 			// border-color: rgba(255, 255, 0, 1);
-			box-shadow: 0px 0px 103px 0px var(--color-main-1),
-				0px 0px 121px 0px rgba(255, 255, 0, 1),
-				0px 0px 100px 14px rgba(255, 255, 0, 0.245),
-				inset 0px 0px 0px 5px var(--color-main-1);
+			box-shadow: 0px 0px 0px 0px var(--color-main-1), 0px 0px 31px 0px #ff0,
+				inset 0px 0px 0px 5px hsl(54deg 100% 50%);
+			// box-shadow: 0px 0px 103px 0px var(--color-main-1),
+			// 	0px 0px 121px 0px rgba(255, 255, 0, 1),
+			// 	0px 0px 100px 14px rgba(255, 255, 0, 0.245),
+			// 	inset 0px 0px 0px 5px var(--color-main-1);
 			// animation: glow 3s linear alternate-reverse infinite;
 			color: var(--white);
 			font-family: var(--font-main);
@@ -81,6 +83,7 @@
 			.ray_box {
 				// height: 10.75rem;
 				// width: 10.75rem;
+				display: none;
 				position: absolute;
 				top: 50%;
 				left: 50%;
