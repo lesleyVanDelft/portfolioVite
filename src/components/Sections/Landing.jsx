@@ -3,7 +3,10 @@ import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import YellowAccent from '../YellowAccent';
 import pageTransitionImg from '../../assets/img/pageTransition.png';
-
+import sunSvg from '../../assets/sunSvg.svg';
+import blob from '../../assets/blobanimation.svg';
+import SunSvg from '../SunSvg';
+import BlobSvg from '../BlobSvg';
 const variants = {
 	hidden: {
 		opacity: 0,
@@ -57,17 +60,16 @@ const Landing = ({ scrollToAbout }) => {
 
 				<motion.button
 					className="Landing__content--button btnPrimary"
-					// variants={sunVariant}
-					// initial="initial"
-					// animate="animate"
 					onClick={() => scrollToAbout()}>
 					<span>About me</span>
-					<div className="ray_box">
+					{/* <div className="ray_box">
 						{test.map((el, i) => {
 							return <span className={`ray ray${i + 1}`} key={i}></span>;
 						})}
-					</div>
+					</div> */}
+					<SunSvg />
 				</motion.button>
+				<BlobSvg />
 			</div>
 		</motion.section>
 	);

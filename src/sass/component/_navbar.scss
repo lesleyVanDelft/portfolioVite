@@ -269,7 +269,7 @@
 		bottom: 0;
 		top: 50px;
 		animation: spin 8s infinite linear;
-		transform: rotate(220deg);
+		transform: rotate(120deg);
 		z-index: 49;
 
 		.rocket {
@@ -337,7 +337,7 @@
 
 	@keyframes spin {
 		0% {
-			transform: rotate(120deg);
+			transform: rotate(199deg);
 		}
 		100% {
 			// opacity: 1;
