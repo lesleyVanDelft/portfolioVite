@@ -69,7 +69,7 @@ const Landing = ({ scrollToAbout }) => {
 					</div> */}
 					<SunSvg />
 				</motion.button>
-				<BlobSvg />
+				{/* <BlobSvg /> */}
 			</div>
 		</motion.section>
 	);
