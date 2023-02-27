@@ -16,20 +16,22 @@ export const projectList = [
 		title: 'Space Tourism',
 		tech: ['React', 'Sass'],
 		image: mockupSpaceTourism,
-		description: 'A simple static site using React number 2. ',
+		description:
+			'A fun static website using React and React Router. Making the sliders and carousels increased my understanding of JavaScript quite a bit. I was surprised by how the simple things are often the hardest to execute properly.',
 	},
 	{
 		title: 'Designo',
 		tech: ['React', 'Sass'],
 		image: imageDesigno,
 		description:
-			'A simple static site using React. This was my first time implementing Google Maps into a website. ',
+			'A static website using React. I learned to work with Framer Motion to create fast and smooth animations. Making this project I also learned how to implement and work with the Google Maps API.',
 	},
 	{
 		title: 'PhotoSnap',
 		tech: ['React', 'Sass'],
 		image: mockupPhotosnap,
-		description: 'A simple static site using React number 3.  ',
+		description:
+			'Another fun static website made with React. This project made me fall in love with animations. Good usage of animations can make or break a website. I also learned about the checkbox toggle trick, where you hide the actual checkbox but style the label instead. which was more complex than I thought. It was a very useful CSS learning experience.',
 		linkGithub: 'https://github.com/lesleyVanDelft/PhotoSnap',
 		linkLive: '',
 	},

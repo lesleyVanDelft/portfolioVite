@@ -1,9 +1,19 @@
 #blobSvg {
 	position: absolute;
-	top: -7rem;
-	left: 7rem;
 	isolation: isolate;
 	z-index: -1;
+	width: 800px;
+	height: 800px;
+}
+
+.Blob__one {
+	top: -19rem;
+	left: 1rem;
+}
+
+.Blob__two {
+	top: 25rem;
+	left: -25rem;
 }
 
 .mountain {
