@@ -19,6 +19,8 @@ const Navbar = () => {
 	// 	scrollRef.current.scrollIntoView({ behavior: 'smooth' });
 	// };
 
+	const transition = { duration: 0.7, type: 'spring' };
+
 	const menuListVariant = {
 		hidden: {
 			opacity: 0,
@@ -39,6 +41,33 @@ const Navbar = () => {
 			opacity: 1,
 		},
 	};
+
+	const mobileMenuVariant = {
+		hidden: {
+			opacity: 0,
+			x: 75,
+			y: -150,
+			scale: 0,
+			transition,
+		},
+		animate: {
+			opacity: 1,
+			scale: 1,
+			x: -25,
+			y: 82,
+			transition,
+		},
+		exit: {
+			scale: 0,
+			x: 105,
+			y: -75,
+			opacity: 0,
+			transition: {
+				duration: 0.5,
+			},
+		},
+	};
+
 	return (
 		<nav className="Navbar">
 			<div className="Navbar__logo">
@@ -48,7 +77,7 @@ const Navbar = () => {
 					<span className="accentWhite">{`/>`}</span>
 				</h1>
 			</div>
-			<div
+			<motion.div
 				className="Navbar__menu"
 				ref={menuRef}
 				onClick={() => setMenuActive(!menuActive)}>
@@ -57,77 +86,74 @@ const Navbar = () => {
 					<span></span>
 					<span></span>
 				</div>
-				<AnimatePresence>
-					{/* {menuActive && ( */}
-					<motion.nav
-						data-isopen={menuActive}
-						className={`Navbar__menu--mobile ${menuActive ? 'active' : ''}`}
-						// initial="hidden"
-						// animate="visible"
-						// exit={'hidden'}
-						// variants={menuVariant}
-					>
-						<motion.ul
-							variants={menuListVariant}
+				<AnimatePresence mode="wait">
+					{menuActive && (
+						<motion.nav
+							// data-isopen={menuActive}
+							className={`Navbar__menu--mobile ${menuActive ? 'active' : ''}`}
 							initial="hidden"
-							animate="animate">
-							<motion.li
-								variants={listItemVariant}
+							animate="animate"
+							exit="exit"
+							variants={mobileMenuVariant}>
+							<motion.ul
+								variants={menuListVariant}
 								initial="hidden"
 								animate="animate">
-								<motion.a href="#About">
-									<motion.span className="number inverted">01.</motion.span>{' '}
-									About Me
-								</motion.a>
-							</motion.li>
-							<motion.li
-								variants={listItemVariant}
-								initial="hidden"
-								animate="animate">
-								<motion.a href="#projects">
-									<motion.span className="number inverted">02.</motion.span>
-									Projects
-								</motion.a>
-							</motion.li>
-							<motion.li
-								variants={listItemVariant}
-								initial="hidden"
-								animate="animate">
-								<motion.a href="#about">
-									<motion.span className="number inverted">03.</motion.span>
-									Contact
-								</motion.a>
-							</motion.li>
-						</motion.ul>
-						<div className="craters">
-							<div className="crater crater1"></div>
-							<div className="crater crater2"></div>
-							<div className="crater crater3"></div>
-							<div className="crater crater4"></div>
-							<div className="crater crater5"></div>
-						</div>
-					</motion.nav>
-					{/* )} */}
+								<motion.li
+									variants={listItemVariant}
+									initial="hidden"
+									animate="animate">
+									<motion.a href="#About">
+										<motion.span className="number inverted">01.</motion.span>{' '}
+										About Me
+									</motion.a>
+								</motion.li>
+								<motion.li
+									variants={listItemVariant}
+									initial="hidden"
+									animate="animate">
+									<motion.a href="#projects">
+										<motion.span className="number inverted">02.</motion.span>
+										Projects
+									</motion.a>
+								</motion.li>
+								<motion.li
+									variants={listItemVariant}
+									initial="hidden"
+									animate="animate">
+									<motion.a href="#about">
+										<motion.span className="number inverted">03.</motion.span>
+										Contact
+									</motion.a>
+								</motion.li>
+							</motion.ul>
+							<div className="craters">
+								<div className="crater crater1"></div>
+								<div className="crater crater2"></div>
+								<div className="crater crater3"></div>
+								<div className="crater crater4"></div>
+								<div className="crater crater5"></div>
+							</div>
+						</motion.nav>
+					)}
 				</AnimatePresence>
-			</div>
-			{menuActive && (
-				// <AnimatePresence>
-				<div
-					className="orbit"
-					// variants={orbitVariant}
-					// initial="initial"
-					// animate="visible"
-				>
-					<div
-						className="rocket"
-						// variants={rocketVariant}
-						// initial={'initial'}
-					>
-						<div className="window"></div>
+			</motion.div>
+			<AnimatePresence mode="wait">
+				{menuActive && (
+					<div className="orbit">
+						<motion.div
+							className="rocket"
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							exit={{
+								opacity: 0,
+								transition: { duration: 0.4 },
+							}}>
+							<motion.div className="window"></motion.div>
+						</motion.div>
 					</div>
-				</div>
-				// </AnimatePresence>
-			)}
+				)}
+			</AnimatePresence>
 			{menuActive && <Overlay />}
 		</nav>
 	);

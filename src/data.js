@@ -31,7 +31,7 @@ export const projectList = [
 		tech: ['React', 'Sass'],
 		image: mockupPhotosnap,
 		description:
-			'Another fun static website made with React. This project made me fall in love with animations. Good usage of animations can make or break a website. I also learned about the checkbox toggle trick, where you hide the actual checkbox but style the label instead. which was more complex than I thought. It was a very useful CSS learning experience.',
+			'Another fun static website made with React. This project made me fall in love with animations. This is where I learned the hard way that animations can either make or break a website. I also learned about the checkbox toggle trick, where you hide the actual checkbox but style the label instead. which was more complex than I thought. It was a very useful CSS learning experience.',
 		linkGithub: 'https://github.com/lesleyVanDelft/PhotoSnap',
 		linkLive: '',
 	},

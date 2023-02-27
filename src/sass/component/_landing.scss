@@ -5,10 +5,24 @@
 	justify-content: flex-start;
 	padding: 0 0rem;
 	position: relative;
-	padding-top: 4rem;
+	padding-top: 5rem;
 	background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)),
 		url('../../assets/img/galaxy2.jpg') no-repeat 75% center / cover;
 
+	&__planet {
+		width: 200px;
+		height: 200px;
+		background-color: hsla(0, 0%, 100%, 0);
+		box-shadow: 0 0 0px 10px rgba(98, 0, 255, 0.83),
+			inset 0 0 0px 4px rgb(255, 196, 0), 0 0 0px 20px rgba(98, 0, 255, 0.43),
+			inset 0 0 0px 5px rgba(98, 0, 255, 0.63);
+		border-radius: 50vw;
+		animation: levitate 3s linear 0s alternate-reverse infinite;
+		position: absolute;
+		z-index: 1;
+		bottom: 229px;
+		transform: translateX(-50%);
+	}
 	&__images {
 		width: 100%;
 		height: 100%;
@@ -17,13 +31,14 @@
 
 	&__content {
 		width: 100%;
-		height: calc(100dvh - 60px);
+		// height: calc(100dvh - 60px);
+		height: 100dvh;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: flex-start;
 		position: relative;
-		padding-top: 5rem;
+		padding-top: 2rem;
 
 		&--welcome {
 			font-weight: var(--font-weight-light1);
@@ -39,7 +54,7 @@
 		&--description {
 			text-align: center;
 			font-size: 2rem;
-			margin: 3.5rem 0 0.5rem 0;
+			margin: 2.5rem 0 3.5rem 0;
 			line-height: 1.5;
 			letter-spacing: 0.5px;
 			font-family: var(--font-main);
@@ -55,7 +70,7 @@
 			width: 9.75rem;
 			position: relative;
 			border: 5px solid hsla(54, 100%, 50%, 0);
-			animation: glowBoxShadow 2s alternate-reverse infinite ease-in-out;
+			animation: glowBoxShadow 2.5s alternate-reverse infinite ease-in-out;
 			background-color: transparent;
 			color: var(--white);
 			font-family: var(--font-main);
@@ -82,5 +97,20 @@
 				}
 			}
 		}
+	}
+}
+@keyframes rotate {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes levitate {
+	0% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(-0.5rem);
 	}
 }

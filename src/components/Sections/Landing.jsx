@@ -6,11 +6,13 @@ import pageTransitionImg from '../../assets/img/pageTransition.png';
 import sunSvg from '../../assets/sunSvg.svg';
 import blob from '../../assets/blobanimation.svg';
 // import mountainSvg from '../../assets/moonMountain.svg';
-import mountainLandscapeSvg from '../../assets/svg/mountainLandscape.svg';
+// import mountainLandscapeSvg from '../../assets/svg/mountainLandscape.svg';
+import mountainLandscapeSvg from '../../assets/svg/mountainSvg.svg';
 import planetSvg from '../../assets/svg/planetSvg.svg';
 import SunSvg from '../SunSvg';
 import BlobSvg from '../BlobSvg';
 import Content from '../SectionComponents/Content';
+import Planet from '../SvgImages/PlanetSvg';
 
 const variants = {
 	hidden: {
@@ -57,7 +59,10 @@ const Landing = ({ scrollToAbout }) => {
 					<YellowAccent> front end developer</YellowAccent> and I love making
 					beautiful websites.
 				</p>
-				<button className="btnCta landing">About me</button>
+				<div className="Landing__planet">
+					<Planet />
+				</div>
+				{/* <button className="btnCta landing">About me</button> */}
 			</Content>
 			{/* <img src={mountainLandscapeSvg} className="mountain" alt="aa" /> */}
 		</motion.section>

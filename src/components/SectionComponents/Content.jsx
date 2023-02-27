@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform, MotionValue } from 'framer-motion';
-import mountainLandscapeSvg from '../../assets/svg/mountainLandscape.svg';
+import mountainLandscapeSvg from '../../assets/svg/mountainSvg.svg';
 import { useRef } from 'react';
 
 const Content = ({ children, name }) => {

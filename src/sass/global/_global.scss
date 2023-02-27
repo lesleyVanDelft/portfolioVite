@@ -33,6 +33,15 @@ html {
 	height: -webkit-fill-available;
 }
 
+.arrow {
+	font-size: 3rem;
+	z-index: 500;
+	color: red;
+	position: fixed;
+	right: 3rem;
+	top: 2rem;
+}
+
 ul {
 	list-style: none;
 	font-family: inherit;
