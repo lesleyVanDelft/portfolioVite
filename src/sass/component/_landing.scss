@@ -2,23 +2,28 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	padding: 0 1rem;
+	justify-content: flex-start;
+	padding: 0 0rem;
 	position: relative;
+	padding-top: 4rem;
 	background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)),
 		url('../../assets/img/galaxy2.jpg') no-repeat 75% center / cover;
 
-	&__content {
+	&__images {
 		width: 100%;
 		height: 100%;
+		padding: 0;
+	}
+
+	&__content {
+		width: 100%;
+		height: calc(100dvh - 60px);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
-		text-align: center;
-		padding-bottom: 3rem;
+		justify-content: flex-start;
 		position: relative;
-		padding-top: 1rem;
+		padding-top: 5rem;
 
 		&--welcome {
 			font-weight: var(--font-weight-light1);
@@ -32,11 +37,13 @@
 		}
 
 		&--description {
+			text-align: center;
 			font-size: 2rem;
-			margin: 3.5rem 0 6.5rem 0;
+			margin: 3.5rem 0 0.5rem 0;
 			line-height: 1.5;
 			letter-spacing: 0.5px;
 			font-family: var(--font-main);
+			padding: 0 1rem;
 		}
 
 		&--button {

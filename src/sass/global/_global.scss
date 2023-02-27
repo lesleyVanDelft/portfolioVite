@@ -26,7 +26,7 @@ html {
 
 body {
 	color: var(--white);
-	width: 100%;
+	// width: 100%;
 	min-height: 100%;
 }
 html {
@@ -52,10 +52,25 @@ button {
 }
 
 section {
+	// min-height: 100vh;
+	// height: -webkit-fill-available;
+	// height: 100vh;
 	min-height: 100vh;
-	height: -webkit-fill-available;
+	min-height: 100dvh;
+	// height: 100vh;
 	width: 100%;
 	padding: 0 1rem;
+	// counter-increment: section-counter;
+
+	// .pageTitle::before {
+	// 	content: counter(section-counter) '=-=';
+	// }
+
+	// &:nth-child(1) {
+	// 	.pageTitle::before {
+	// 		content: '';
+	// 	}
+	// }
 }
 
 #tsparticles {

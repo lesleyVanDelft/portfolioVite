@@ -1,48 +1,28 @@
-#SunSvg {
-	animation: rotate 100s infinite linear;
-	position: absolute;
-	top: -100%;
-	left: -100%;
-	path {
-		clip-path: alpha;
-	}
-	#centerCircle {
-	}
-
-	#smallBeams {
-		// path {
-		// 	&:nth-child(1) {
-		// 		opacity: 0.2;
-		// 		// animation: scaleBeam 1s 0s alternate-reverse infinite ease;
-		// 	}
-		// 	&:nth-child(2) {
-		// 		opacity: 0.4;
-		// 	}
-		// 	&:nth-child(3) {
-		// 		opacity: 0.6;
-		// 	}
-		// 	&:nth-child(4) {
-		// 		opacity: 0.8;
-		// 	}
-		// }
-	}
-}
-
 #blobSvg {
 	position: absolute;
-	bottom: -10%;
-	left: 0;
-	opacity: 0.356;
-	// clip-path: circle(-10%);
-	// // pointer-events: none;
-	// background-clip: content-box;
-	// -webkit-background-clip: text;
-	// color: red;
-	// clip-path: ;
+	top: -7rem;
+	left: 7rem;
+	isolation: isolate;
+	z-index: -1;
+}
+
+.mountain {
+	height: fit-content;
+	width: fit-content;
+	overflow: hidden;
+	position: absolute;
+	bottom: -15rem;
+	left: -8rem;
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		width: clamp(800px, 120dvw, 1400px);
+	}
 }
 
 @keyframes rotate {
-	// 0% {/
 	100% {
 		transform: rotate(360deg);
 	}

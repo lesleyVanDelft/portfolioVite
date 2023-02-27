@@ -9,7 +9,8 @@ export const projectList = [
 		title: 'Feedback Board',
 		tech: ['React', 'Sass', 'Node', 'Express'],
 		image: mockupFeedback,
-		description: 'A simple static site using React number 4.  ',
+		description:
+			'A full stack website made with the MERN stack. I learned a lot about the basics of Node and Express. I also learned a lot about how to properly use Redux and localStorage. It seemed daunting at first, and it was really confusing at the start, but then it became something I could not work without.',
 	},
 	{
 		title: 'Space Tourism',
