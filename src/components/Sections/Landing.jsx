@@ -61,6 +61,7 @@ const Landing = ({ scrollToAbout }) => {
 				</p>
 				<div className="Landing__planet">
 					<Planet />
+					{/* <button className="btnCta landing">about</button> */}
 				</div>
 				{/* <button className="btnCta landing">About me</button> */}
 			</Content>

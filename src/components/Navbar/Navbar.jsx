@@ -19,7 +19,7 @@ const Navbar = () => {
 	// 	scrollRef.current.scrollIntoView({ behavior: 'smooth' });
 	// };
 
-	const transition = { duration: 0.7, type: 'spring' };
+	const transition = { duration: 0.5, type: 'spring' };
 
 	const menuListVariant = {
 		hidden: {
@@ -28,7 +28,9 @@ const Navbar = () => {
 		animate: {
 			opacity: 1,
 			transition: {
-				staggerChildren: 0.5,
+				duration: 0.2,
+				when: 'beforeChildren', //use this instead of delay
+				staggerChildren: 0.05, //apply stagger on the parent tag
 			},
 		},
 	};
@@ -39,6 +41,11 @@ const Navbar = () => {
 		},
 		animate: {
 			opacity: 1,
+			transition,
+			// y: -100,
+		},
+		exit: {
+			opacity: 0,
 		},
 	};
 
@@ -48,8 +55,8 @@ const Navbar = () => {
 			x: 75,
 			y: -150,
 			// scale: 0,
-			width: 0,
-			height: 0,
+			// width: 0,
+			// height: 0,
 			transition,
 		},
 		animate: {
@@ -57,19 +64,19 @@ const Navbar = () => {
 			// scale: 1,
 			x: -25,
 			y: 82,
-			width: 656,
-			height: 656,
+			// width: 656,
+			// height: 656,
 			transition,
 		},
 		exit: {
 			// scale: 0,
-			width: 0,
-			height: 0,
-			x: 105,
+			// width: 0,
+			// height: 0,
+			x: 150,
 			y: -75,
 			opacity: 0,
 			transition: {
-				duration: 0.5,
+				duration: 0.3,
 			},
 		},
 	};
@@ -107,8 +114,9 @@ const Navbar = () => {
 								animate="animate">
 								<motion.li
 									variants={listItemVariant}
-									initial="hidden"
-									animate="animate">
+									// initial="hidden"
+									// animate="animate"
+								>
 									<motion.a href="#About">
 										<motion.span className="number inverted">01.</motion.span>{' '}
 										About Me
@@ -116,8 +124,9 @@ const Navbar = () => {
 								</motion.li>
 								<motion.li
 									variants={listItemVariant}
-									initial="hidden"
-									animate="animate">
+									// initial="hidden"
+									// animate="animate"
+								>
 									<motion.a href="#projects">
 										<motion.span className="number inverted">02.</motion.span>
 										Projects
@@ -125,8 +134,9 @@ const Navbar = () => {
 								</motion.li>
 								<motion.li
 									variants={listItemVariant}
-									initial="hidden"
-									animate="animate">
+									// initial="hidden"
+									// animate="animate"
+								>
 									<motion.a href="#about">
 										<motion.span className="number inverted">03.</motion.span>
 										Contact

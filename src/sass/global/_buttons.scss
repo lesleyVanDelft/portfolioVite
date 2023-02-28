@@ -33,10 +33,17 @@
 	font-weight: var(--font-weight-light2);
 	z-index: 49;
 	align-self: center;
+	line-height: 0;
 	// isolation: isolate;
 
 	&.landing {
 		margin: 0;
+		background: rgb(91, 0, 77);
+		background: radial-gradient(
+			circle,
+			rgba(217, 0, 104, 1) 20%,
+			rgba(91, 0, 77, 1) 100%
+		);
 	}
 
 	&:last-child {

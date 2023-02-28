@@ -22,7 +22,7 @@ const ProjectsItem = ({ project }) => {
 						type: 'spring',
 						duration: 1,
 						bounce: 0.2,
-						delay: 0.4,
+						delay: 0.2,
 					},
 				}
 			}>
