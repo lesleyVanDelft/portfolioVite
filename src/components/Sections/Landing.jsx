@@ -51,6 +51,7 @@ const Landing = ({ scrollToAbout }) => {
 
 				<div className="Landing__images"></div>
 			</motion.div> */}
+
 			<Content name={'Landing'}>
 				<h3 className="Landing__content--welcome">Hi there!</h3>
 				<h2 className="Landing__content--name">My name is Lesley.</h2>

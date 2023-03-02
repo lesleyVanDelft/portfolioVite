@@ -50,3 +50,25 @@
 		margin: 0;
 	}
 }
+
+.btnTop {
+	z-index: 500;
+	width: 60px;
+	height: 60px;
+	position: fixed;
+	right: 3rem;
+	bottom: 2rem;
+	opacity: 0.9;
+	filter: brightness(1.1);
+	background: url('../../assets/svg/mandalaSvg.svg') no-repeat center center /
+		cover;
+
+	.arrowTop {
+		color: var(--black);
+		color: rgba(0, 0, 0, 0.95);
+		font-size: 2rem;
+		padding-top: 0.2rem;
+		// z-index: -1;
+		// isolation: isolate;
+	}
+}
