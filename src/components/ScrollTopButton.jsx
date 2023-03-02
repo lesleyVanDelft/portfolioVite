@@ -9,20 +9,26 @@ const ScrollTopButton = ({ scrollTo }) => {
 		initial: {
 			opacity: 0,
 			scale: 0,
+			transition,
 		},
 		animate: {
 			opacity: 1,
-			scale: 1,
+			scale: 0.9,
+			rotate: 360,
 			transition,
 		},
 		exit: {
 			opacity: 0,
 			scale: 0,
+			rotate: -360,
+			transition: {
+				duration: 0.3,
+			},
 		},
 	};
 	return (
 		<motion.button
-			className="ScrollTopButton btnTop"
+			className={`ScrollTopButton btnTop `}
 			onClick={scrollTo}
 			variants={buttonVariant}
 			initial="initial"

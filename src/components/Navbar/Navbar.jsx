@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import NavbarMenu from './NavbarMenu';
+import NavbarMenuMobile from './NavbarMenuMobile';
 import Overlay from '../Overlay';
 import { useOutsideClick } from '../../hooks/useOutsideClick';
 
@@ -13,73 +13,6 @@ const Navbar = () => {
 			setMenuActive(false);
 		}
 	});
-	// const scrollRef = useRef(null);
-
-	// const scrollToAbout = () => {
-	// 	scrollRef.current.scrollIntoView({ behavior: 'smooth' });
-	// };
-
-	const transition = { duration: 0.5, type: 'spring' };
-
-	const menuListVariant = {
-		hidden: {
-			opacity: 0,
-		},
-		animate: {
-			opacity: 1,
-			transition: {
-				duration: 0.2,
-				when: 'beforeChildren', //use this instead of delay
-				staggerChildren: 0.05, //apply stagger on the parent tag
-			},
-		},
-	};
-
-	const listItemVariant = {
-		hidden: {
-			opacity: 0,
-		},
-		animate: {
-			opacity: 1,
-			transition,
-			// y: -100,
-		},
-		exit: {
-			opacity: 0,
-		},
-	};
-
-	const mobileMenuVariant = {
-		hidden: {
-			opacity: 0,
-			x: 75,
-			y: -150,
-			// scale: 0,
-			// width: 0,
-			// height: 0,
-			transition,
-		},
-		animate: {
-			opacity: 1,
-			// scale: 1,
-			x: -25,
-			y: 82,
-			// width: 656,
-			// height: 656,
-			transition,
-		},
-		exit: {
-			// scale: 0,
-			// width: 0,
-			// height: 0,
-			x: 150,
-			y: -75,
-			opacity: 0,
-			transition: {
-				duration: 0.3,
-			},
-		},
-	};
 
 	return (
 		<nav className="Navbar">
@@ -100,61 +33,10 @@ const Navbar = () => {
 					<span></span>
 				</div>
 				<AnimatePresence mode="wait">
-					{menuActive && (
-						<motion.nav
-							// data-isopen={menuActive}
-							className={`Navbar__menu--mobile ${menuActive ? 'active' : ''}`}
-							initial="hidden"
-							animate="animate"
-							exit="exit"
-							variants={mobileMenuVariant}>
-							<motion.ul
-								variants={menuListVariant}
-								initial="hidden"
-								animate="animate">
-								<motion.li
-									variants={listItemVariant}
-									// initial="hidden"
-									// animate="animate"
-								>
-									<motion.a href="#About">
-										<motion.span className="number inverted">01.</motion.span>{' '}
-										About Me
-									</motion.a>
-								</motion.li>
-								<motion.li
-									variants={listItemVariant}
-									// initial="hidden"
-									// animate="animate"
-								>
-									<motion.a href="#projects">
-										<motion.span className="number inverted">02.</motion.span>
-										Projects
-									</motion.a>
-								</motion.li>
-								<motion.li
-									variants={listItemVariant}
-									// initial="hidden"
-									// animate="animate"
-								>
-									<motion.a href="#about">
-										<motion.span className="number inverted">03.</motion.span>
-										Contact
-									</motion.a>
-								</motion.li>
-							</motion.ul>
-							<div className="craters">
-								<div className="crater crater1"></div>
-								<div className="crater crater2"></div>
-								<div className="crater crater3"></div>
-								<div className="crater crater4"></div>
-								<div className="crater crater5"></div>
-							</div>
-						</motion.nav>
-					)}
+					{menuActive && <NavbarMenuMobile />}
 				</AnimatePresence>
 			</motion.div>
-			<AnimatePresence mode="wait">
+			{/* <AnimatePresence mode="wait">
 				{menuActive && (
 					<div className="orbit">
 						<motion.div
@@ -168,8 +50,8 @@ const Navbar = () => {
 							<motion.div className="window"></motion.div>
 						</motion.div>
 					</div>
-				)}
-			</AnimatePresence>
+				)} */}
+			{/* </AnimatePresence> */}
 			{menuActive && <Overlay />}
 		</nav>
 	);

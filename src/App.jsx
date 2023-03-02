@@ -1,16 +1,11 @@
 import { BrowserRouter } from 'react-router-dom';
 import AnimatedRoutes from './components/AnimatedRoutes';
-// import { useMediaQuery } from 'react-responsive';
 import { useEffect, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-// import { FaAngleUp } from 'react-icons/fa';
 import './styles/css/index.css';
 import ScrollTopButton from './components/ScrollTopButton';
 
 function App() {
-	// const isMobile = useMediaQuery({
-	// 	query: '(max-width: 768px)',
-	// });
 	const [showTopBtn, setShowTopBtn] = useState(false);
 
 	useEffect(() => {
@@ -22,6 +17,7 @@ function App() {
 			}
 		});
 	}, []);
+
 	const goToTop = () => {
 		window.scrollTo({
 			top: 0,
@@ -30,7 +26,6 @@ function App() {
 	};
 	return (
 		<div className="App">
-			{/* {showTopBtn && <FaAngleUp className="btnTop" />} */}
 			<AnimatePresence>
 				{showTopBtn && <ScrollTopButton scrollTo={goToTop} />}
 			</AnimatePresence>
