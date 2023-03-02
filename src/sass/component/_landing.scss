@@ -8,6 +8,7 @@
 	// padding-top: 3rem;
 	background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)),
 		url('../../assets/img/galaxy2.jpg') no-repeat 75% center / cover;
+	min-height: 100dvh;
 
 	&__planet {
 		width: clamp(min(7.5rem), 25vh - 2rem, max(12.5rem));
